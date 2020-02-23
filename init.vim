@@ -27,7 +27,7 @@ nnoremap <silent> <leader>q :b#<CR>
 nnoremap <silent> <leader>w :bd<CR>
 
 " theme
-colorscheme solarized8
+colorscheme gruvbox8
 set termguicolors
 set background=dark
 
