@@ -22,5 +22,5 @@ export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
 export BYOBU_NO_TITLE=1
 
 # libvirt
-export LIBVIRT_DEFAULT_URI=qemu:///system
+export LIBVIRT_DEFAULT_URI=qemu:///session
 

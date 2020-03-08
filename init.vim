@@ -8,16 +8,17 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/vim-mucomplete'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'lifepillar/vim-solarized8'
 Plug 'jiangmiao/auto-pairs'
+Plug 'janko/vim-test'
 call plug#end()
 
 " leader mapping
@@ -41,5 +42,4 @@ set splitbelow
 set splitright
 
 " mucomplete
-set completeopt+=menuone
-set completeopt+=noselect
+set completeopt+=menuone,noselect
