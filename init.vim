@@ -14,11 +14,12 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'lifepillar/vim-mucomplete'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'lifepillar/vim-solarized8'
+Plug 'lifepillar/vim-mucomplete'
 Plug 'jiangmiao/auto-pairs'
 Plug 'janko/vim-test'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 " leader mapping
@@ -40,6 +41,17 @@ set smartcase
 set hidden
 set splitbelow
 set splitright
+set autowrite
 
 " mucomplete
-set completeopt+=menuone,noselect
+set completeopt+=menuone
+set completeopt-=preview
+set shortmess+=c
+set belloff+=ctrlg
+
+" vim-go
+autocmd FileType go nmap <leader>b :GoBuild<CR>
+autocmd FileType go nmap <leader>r :GoRun!<CR>
+autocmd FileType go nmap <leader>t :GoTest!<CR>
+let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 1

@@ -1,26 +1,25 @@
-# global
-[ -f /etc/bashrc ] && source /etc/bashrc
+# if not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-# user
-if ! [[ ${PATH} =~ ${HOME}/.local/bin ]]; then
-	PATH=${HOME}/.local/bin:${PATH}
-fi
+# prompt
+PS1='[\u@\h \W]\$ '
 
 # alias
-test -s ~/.alias && . ~/.alias || true
+alias ls='ls --color=auto'
+alias vim='nvim'
 
-# fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow -g "!{.git,node_modules}"'
-export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
+# editor
+EDITOR=nvim
+export EDITOR
+
+# user bin
+PATH=${HOME}/.local/bin:${PATH}
 
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
-# byobu
-export BYOBU_NO_TITLE=1
-
-# libvirt
-export LIBVIRT_DEFAULT_URI=qemu:///session
-
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow -g "!{.git,node_modules}"'
+export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
