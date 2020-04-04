@@ -9,6 +9,7 @@ endif
 
 call plug#begin()
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -19,7 +20,6 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'lifepillar/vim-mucomplete'
 Plug 'jiangmiao/auto-pairs'
 Plug 'janko/vim-test'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 " leader mapping
@@ -34,6 +34,7 @@ set termguicolors
 set background=dark
 
 " editor
+set mouse=a
 set number
 set clipboard+=unnamedplus
 set ignorecase
@@ -48,10 +49,3 @@ set completeopt+=menuone
 set completeopt-=preview
 set shortmess+=c
 set belloff+=ctrlg
-
-" vim-go
-autocmd FileType go nmap <leader>b :GoBuild<CR>
-autocmd FileType go nmap <leader>r :GoRun!<CR>
-autocmd FileType go nmap <leader>t :GoTest!<CR>
-let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
