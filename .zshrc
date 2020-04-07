@@ -1,6 +1,6 @@
 # ohmyzsh
 export ZSH="/home/zasda/.oh-my-zsh"
-ZSH_THEME="cloud"
+ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
 plugins=(
 	asdf
@@ -11,6 +11,9 @@ source $ZSH/oh-my-zsh.sh
 
 # user bin
 [ -d "${HOME}/.local/bin" ] && export PATH=${HOME}/.local/bin:${PATH}
+
+# editor
+export EDITOR="nvim"
 
 # fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow -g '!{.git,node_modules}'"

@@ -8,15 +8,17 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'vim-airline/vim-airline'
+Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'lifepillar/vim-gruvbox8'
-Plug 'lifepillar/vim-solarized8'
 Plug 'lifepillar/vim-mucomplete'
 Plug 'jiangmiao/auto-pairs'
 Plug 'janko/vim-test'
@@ -29,7 +31,7 @@ nnoremap <silent> <leader>q :b#<CR>
 nnoremap <silent> <leader>w :bd<CR>
 
 " theme
-colorscheme gruvbox8
+colorscheme gruvbox
 set termguicolors
 set background=dark
 
@@ -43,9 +45,14 @@ set hidden
 set splitbelow
 set splitright
 set autowrite
+set noshowmode
 
 " mucomplete
 set completeopt+=menuone
 set completeopt-=preview
 set shortmess+=c
 set belloff+=ctrlg
+
+" airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
