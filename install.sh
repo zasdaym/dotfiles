@@ -12,6 +12,7 @@ ln -nfs ${DOT_DIR}/.zshrc ${HOME}/.zshrc
 mkdir -p ${HOME}/.config/nvim
 ln -nfs ${DOT_DIR}/init.vim ${HOME}/.config/nvim/init.vim
 
+# asdf
 if [[ ! -d ${HOME}/.asdf ]]; then
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.6
 fi
