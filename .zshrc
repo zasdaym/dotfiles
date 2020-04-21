@@ -15,6 +15,9 @@ source $ZSH/oh-my-zsh.sh
 # editor
 export EDITOR="nvim"
 
+# libvirt
+export LIBVIRT_DEFAULT_URI="qemu:///system"
+
 # fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow -g '!{.git,node_modules}'"
 export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
