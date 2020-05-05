@@ -1,11 +1,14 @@
-# ohmyzsh
+# oh-my-zsh
 export ZSH="/home/zasda/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
 plugins=(
 	asdf
+	docker
+	docker-compose
 	fzf
 	git
+	minikube
 )
 source $ZSH/oh-my-zsh.sh
 
