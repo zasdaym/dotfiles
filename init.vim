@@ -10,6 +10,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
-colorscheme nord
+" conf
+set termguicolors
 set number relativenumber
 set ignorecase smartcase
+set clipboard+=unnamedplus
+set splitright splitbelow
+colorscheme nord
