@@ -20,6 +20,8 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
+export EDITOR=nvim
+
 # snap
 [ -d "/snap/bin" ] && export PATH="/snap/bin:${PATH}"
 

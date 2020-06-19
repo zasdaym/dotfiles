@@ -10,6 +10,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'arcticicestudio/nord-vim'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 " conf

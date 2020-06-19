@@ -1,16 +1,21 @@
 #!/usr/bin/env bash
 
+set -e
+
 # check command
 if [[ "$(command -v curl git zsh | wc -l)" -ne 3 ]]; then
   echo "Please install curl, git, and zsh."
   exit 1
 fi
 
+# gitconfig
+ln -nfs ${PWD}/gitconfig ${HOME}/.gitconfig
+
 # oh-my-zsh
 if [[ ! -d ${HOME}/.oh-my-zsh ]]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
-ln -nfs ${PWD}/.zshrc ${HOME}/.zshrc
+ln -nfs ${PWD}/zshrc ${HOME}/.zshrc
 
 # asdf
 if [[ ! -d ${HOME}/.asdf ]]; then
