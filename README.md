@@ -1,1 +1,1 @@
-# Dotfiles of zasdaym
+The dotfiles of zasdaym

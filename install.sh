@@ -1,29 +1,26 @@
 #!/usr/bin/env bash
 
-set -e
+set -o errexit
+set -o errtrace
+set -o nounset
+set -o pipefail
 
-# check command
-if [[ "$(command -v curl git zsh | wc -l)" -ne 3 ]]; then
-  echo "Please install curl, git, and zsh."
-  exit 1
+programs=(curl git vim zsh)
+for program in ${programs[@]}; do
+	if [[ ! -x "$(command -v ${program})" ]]; then
+		echo "Please install ${program} first"
+		exit 1
+	fi
+done
+
+if [[ ${SHELL} != "/bin/zsh" ]]; then
+	chsh -s /bin/zsh
 fi
 
-# gitconfig
-ln -nfs ${PWD}/gitconfig ${HOME}/.gitconfig
-
-# oh-my-zsh
 if [[ ! -d ${HOME}/.oh-my-zsh ]]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
-ln -nfs ${PWD}/zshrc ${HOME}/.zshrc
-
-# asdf
-if [[ ! -d ${HOME}/.asdf ]]; then
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.8
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
-# neovim
-mkdir -p ${HOME}/.config/nvim
-ln -nfs ${PWD}/init.vim ${HOME}/.config/nvim/init.vim
-
-echo "Done"
+ln -fs ${PWD}/.tmux.conf ${HOME}/.tmux.conf
+ln -fs ${PWD}/.vimrc ${HOME}/.vimrc
+ln -fs ${PWD}/.zshrc ${HOME}/.zshrc
