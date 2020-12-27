@@ -5,11 +5,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'arcticicestudio/nord-vim'
 Plug 'doums/darcula'
 Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
-colorscheme darcula
+colorscheme nord
 set number
 set relativenumber
 set splitright
