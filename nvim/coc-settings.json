@@ -1,0 +1,20 @@
+{
+	"suggest.noselect": false,
+	"yaml.schemas": {
+		"http://json.schemastore.org/github-workflow": [".github/workflows/*.yml"],
+		"http://json.schemastore.org/gitlab-ci": [".gitlab-ci.yml"],
+		"kubernetes": ["*.yaml"]
+	},
+	"languageserver": {
+		"terraform": {
+			"command": "terraform-ls",
+			"args": ["serve"],
+			"filetypes": [
+				"terraform",
+				"tf"
+			],
+			"initializationOptions": {},
+			"settings": {}
+		}
+	}
+}
