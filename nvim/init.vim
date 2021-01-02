@@ -24,14 +24,16 @@ call plug#end()
 
 " vim
 colorscheme nord
-set termguicolors
-set hidden
-set ignorecase smartcase
-set number relativenumber
-set splitright splitbelow
-set ts=4 sts=4 sw=4
 set clipboard=unnamed
+set ignorecase smartcase
+set hidden
+set mouse=a
 set noshowmode
+set number relativenumber
+set showtabline=2
+set splitright splitbelow
+set termguicolors
+set ts=4 sts=4 sw=4
 
 " coc extensions
 let g:coc_global_extensions = [
@@ -95,8 +97,26 @@ let g:lightline = {
 			\			[ 'fileformat', 'fileencoding', 'filetype' ]
 			\		]
 			\	},
+			\	'tabline': {
+			\		'left': [
+			\			[ 'buffers' ]
+			\		],
+			\		'right': [
+			\			[]
+			\		]
+			\	},
+			\	'component_expand': {
+			\		'buffers': 'lightline#bufferline#buffers'
+			\	},
 			\	'component_function': {
 			\		'gitbranch': 'fugitive#head',
+			\	},
+			\	'component_raw': {
+			\		'buffers': 1
+			\	},
+			\	'component_type': {
+			\		'buffers': 'tabsel'
 			\	}
 			\ }
+let g:lightline#bufferline#clickable = 1
 call lightline#coc#register()
