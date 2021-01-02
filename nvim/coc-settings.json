@@ -1,9 +1,6 @@
 {
-	"suggest.noselect": false,
-	"yaml.schemas": {
-		"http://json.schemastore.org/github-workflow": [".github/workflows/*.yml"],
-		"http://json.schemastore.org/gitlab-ci": [".gitlab-ci.yml"],
-		"kubernetes": ["*.yaml"]
+	"go.goplsOptions": {
+		"usePlaceholders": true
 	},
 	"languageserver": {
 		"terraform": {
@@ -16,5 +13,15 @@
 			"initializationOptions": {},
 			"settings": {}
 		}
+	},
+	"list.source.symbols.excludes": [
+		"/usr/local/Cellar/*",
+		"/Users/zasda/go/*"
+	],
+	"suggest.noselect": false,
+	"yaml.schemas": {
+		"http://json.schemastore.org/github-workflow": [".github/workflows/*.yml"],
+		"http://json.schemastore.org/gitlab-ci": [".gitlab-ci.yml"],
+		"kubernetes": ["*.yaml"]
 	}
 }

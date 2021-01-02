@@ -27,4 +27,5 @@ fi
 # symlink config files
 ln -fs "${PWD}/.tmux.conf" "${HOME}/.tmux.conf"
 ln -fsn "${PWD}/nvim" "${HOME}/.config/nvim"
-ln -fs "${PWD}/.zshrc ${HOME}/.zshrc"
+ln -fsn "${PWD}/alacritty" "${HOME}/.config/alacritty"
+ln -fs "${PWD}/.zshrc" "${HOME}/.zshrc"
