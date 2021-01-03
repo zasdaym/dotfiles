@@ -98,6 +98,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Custom configuration
+
+export EDITOR="nvim"
+
 alias vim="nvim"
 
 # export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
