@@ -3,11 +3,14 @@ window:
 font:
   normal:
     family: JetBrains Mono
+    style: Regular
   bold:
     family: JetBrains Mono
+    style: Bold
   italic:
     family: JetBrains Mono
-  size: 13
+    style: Italic
+  size: 14
 colors:
   primary:
     background: '#2e3440'

@@ -35,6 +35,9 @@ set splitright splitbelow
 set termguicolors
 set ts=4 sts=4 sw=4
 
+" disable netrw
+let g:netrw_dirhistmax = 0
+
 " coc extensions
 let g:coc_global_extensions = [
 			\'coc-go',

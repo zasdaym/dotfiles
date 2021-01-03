@@ -15,8 +15,8 @@
 		}
 	},
 	"list.source.symbols.excludes": [
-		"/usr/local/Cellar/*",
-		"/Users/zasda/go/*"
+		"/usr/local/Cellar/**",
+		"/Users/zasda/go/**"
 	],
 	"suggest.noselect": false,
 	"yaml.schemas": {
