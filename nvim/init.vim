@@ -49,6 +49,7 @@ let g:coc_global_extensions = [
 			\]
 
 " coc keymap
+nmap <silent> <Leader>l <Plug>(coc-format)
 nmap <silent> <F2> <Plug>(coc-rename)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
