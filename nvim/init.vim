@@ -18,8 +18,6 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sensible'
-" Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " vim
@@ -45,6 +43,7 @@ let g:coc_global_extensions = [
 			\'coc-pairs',
 			\'coc-sh',
 			\'coc-snippets',
+			\'coc-svelte',
 			\'coc-yaml',
 			\]
 
@@ -81,9 +80,6 @@ let g:coc_snippet_next = '<tab>'
 nmap <silent> <Leader>p :Files <CR>
 nmap <silent> <Leader>b :Buffers <CR>
 nmap <silent> <Leader>q :bd <CR>
-
-" vim-airline
-" let g:airline#extensions#tabline#enabled = 1
 
 " lightline
 let g:lightline = {
