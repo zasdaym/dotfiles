@@ -9,6 +9,7 @@ unlet autoload_plug_path
 
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'arcticicestudio/nord-vim'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'itchyny/lightline.vim'
 Plug 'josa42/vim-lightline-coc'
 Plug 'junegunn/fzf'
@@ -35,6 +36,14 @@ set ts=4 sts=4 sw=4
 
 " disable netrw
 let g:netrw_dirhistmax = 0
+
+" vim-tmux navigation
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <A-Left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <A-Down> :TmuxNavigateDown<cr>
+nnoremap <silent> <A-Up> :TmuxNavigateUp<cr>
+nnoremap <silent> <A-Right> :TmuxNavigateRight<cr>
+nnoremap <silent> <A-\> :TmuxNavigatePrevious<cr>
 
 " coc extensions
 let g:coc_global_extensions = [
@@ -64,7 +73,8 @@ function! s:show_documentation()
 		execute '!' . &keywordprg . " " . expand('<cword>')
 	endif
 endfunction
-autocmd FileType go nmap gt :CocCommand go.tags.add.prompt <CR>
+autocmd FileType go nmap gta :CocCommand go.tags.add.prompt <CR>
+autocmd FileType go nmap gtr :CocCommand go.tags.remove.prompt <CR>
 inoremap <silent><expr> <TAB>
 			\ pumvisible() ? coc#_select_confirm() :
 			\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :

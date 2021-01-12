@@ -21,7 +21,6 @@
 	"suggest.noselect": false,
 	"yaml.schemas": {
 		"http://json.schemastore.org/github-workflow": [".github/workflows/*.yml"],
-		"http://json.schemastore.org/gitlab-ci": [".gitlab-ci.yml"],
-		"kubernetes": ["*.yaml"]
+		"http://json.schemastore.org/gitlab-ci": [".gitlab-ci.yml"]
 	}
 }
