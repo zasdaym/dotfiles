@@ -10,7 +10,7 @@ font:
   italic:
     family: JetBrains Mono
     style: Italic
-  size: 14
+  size: 11
 colors:
   primary:
     background: '#2e3440'
