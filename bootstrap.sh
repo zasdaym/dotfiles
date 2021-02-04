@@ -24,8 +24,13 @@ if [[ ! -d ${HOME}/.oh-my-zsh ]]; then
 	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
+# check tpm
+if [[ ! -d "${HOME}/.tmux/plugins/tpm" ]]; then
+	git clone https://github.com/tmux-plugins/tpm "${HOME}/.tmux/plugins/tpm"
+fi
+
 # symlink config files
-ln -fs "${PWD}/.tmux.conf" "${HOME}/.tmux.conf"
+ln -fsn "${PWD}/tmux" "${HOME}/.config/tmux"
 ln -fsn "${PWD}/nvim" "${HOME}/.config/nvim"
 ln -fsn "${PWD}/alacritty" "${HOME}/.config/alacritty"
 ln -fs "${PWD}/.zshrc" "${HOME}/.zshrc"
