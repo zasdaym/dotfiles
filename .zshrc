@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker fzf git golang kubectl tmux vagrant)
+plugins=(docker fzf git golang kubectl tmux vagrant vault)
 
 source $ZSH/oh-my-zsh.sh
 
