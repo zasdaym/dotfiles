@@ -14,6 +14,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'josa42/vim-lightline-coc'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'lifepillar/vim-solarized8'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sheerun/vim-polyglot'
