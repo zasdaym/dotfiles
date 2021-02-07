@@ -1,7 +1,9 @@
 import:
   - .config/alacritty/themes/nord.yml
 window:
-  startup_mode: Fullscreen
+  decorations: none
+  dynamic_title: false
+  startup_mode: Maximized
   title: Alacritty
 font:
   normal:
@@ -13,4 +15,7 @@ font:
   italic:
     family: JetBrains Mono
     style: Italic
+  bold_italic:
+    family: JetBrains Mono
+    style: Bold Italic
   size: 11
