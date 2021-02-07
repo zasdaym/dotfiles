@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker fzf git golang kube-ps1 kubectl tmux vagrant vault)
+plugins=(docker fzf git golang kubectl minikube tmux vagrant vault)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,5 +112,3 @@ alias vim="nvim"
 #
 
 export FZF_DEFAULT_OPTS='--no-color'
-
-PROMPT=${PROMPT}'$(kube_ps1) '
