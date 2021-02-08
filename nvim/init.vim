@@ -24,7 +24,6 @@ Plug 'tpope/vim-surround'
 call plug#end()
 
 " vim
-colorscheme nord
 set clipboard+=unnamedplus
 set ignorecase smartcase
 set hidden
@@ -35,6 +34,7 @@ set showtabline=2
 set splitright splitbelow
 set termguicolors
 set ts=4 sts=4 sw=4
+colorscheme nord
 
 " disable netrw
 let g:netrw_dirhistmax = 0
