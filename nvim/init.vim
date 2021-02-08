@@ -25,7 +25,7 @@ call plug#end()
 
 " vim
 colorscheme nord
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set ignorecase smartcase
 set hidden
 set mouse=a
