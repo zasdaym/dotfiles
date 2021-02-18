@@ -14,7 +14,7 @@ for program in ${programs[@]}; do
 	fi
 done
 
-# check shell
+# check zsh
 if [[ ${SHELL} != "/bin/zsh" ]]; then
 	chsh -s /bin/zsh
 fi
@@ -30,7 +30,8 @@ if [[ ! -d "${HOME}/.tmux/plugins/tpm" ]]; then
 fi
 
 # symlink config files
-ln -fsn "${PWD}/tmux" "${HOME}/.config/tmux"
-ln -fsn "${PWD}/nvim" "${HOME}/.config/nvim"
+ln -fsn "${PWD}/.zshrc" "${HOME}/.zshrc"
 ln -fsn "${PWD}/alacritty" "${HOME}/.config/alacritty"
-ln -fs "${PWD}/.zshrc" "${HOME}/.zshrc"
+ln -fsn "${PWD}/git" "${HOME}/.config/git"
+ln -fsn "${PWD}/nvim" "${HOME}/.config/nvim"
+ln -fsn "${PWD}/tmux" "${HOME}/.config/tmux"
