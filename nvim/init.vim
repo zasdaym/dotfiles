@@ -9,18 +9,14 @@ unlet autoload_plug_path
 
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'arcticicestudio/nord-vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'itchyny/lightline.vim'
-Plug 'josa42/vim-lightline-coc'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'lifepillar/vim-solarized8'
-Plug 'mengelbrecht/lightline-bufferline'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " vim
@@ -30,7 +26,6 @@ set hidden
 set mouse=a
 set noshowmode
 set number relativenumber
-set showtabline=2
 set splitright splitbelow
 set termguicolors
 set ts=4 sts=4 sw=4
@@ -39,13 +34,8 @@ colorscheme nord
 " disable netrw
 let g:netrw_dirhistmax = 0
 
-" vim-tmux navigation
-let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <A-Left> :TmuxNavigateLeft<cr>
-nnoremap <silent> <A-Down> :TmuxNavigateDown<cr>
-nnoremap <silent> <A-Up> :TmuxNavigateUp<cr>
-nnoremap <silent> <A-Right> :TmuxNavigateRight<cr>
-nnoremap <silent> <A-\> :TmuxNavigatePrevious<cr>
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
 
 " coc extensions
 let g:coc_global_extensions = [
@@ -58,12 +48,12 @@ let g:coc_global_extensions = [
 			\]
 
 " coc keymap
-nmap <silent> <Leader>l <Plug>(coc-format)
-nmap <silent> <F2> <Plug>(coc-rename)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> <Leader>g :CocList symbols <CR>
+nnoremap <silent> <Leader>l <Plug>(coc-format)
+nnoremap <silent> <F2> <Plug>(coc-rename)
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gr <Plug>(coc-references)
+nnoremap <silent> <Leader>g :CocList symbols <CR>
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
 	if (index(['vim','help'], &filetype) >= 0)
@@ -74,8 +64,6 @@ function! s:show_documentation()
 		execute '!' . &keywordprg . " " . expand('<cword>')
 	endif
 endfunction
-autocmd FileType go nmap gta :CocCommand go.tags.add.prompt <CR>
-autocmd FileType go nmap gtr :CocCommand go.tags.remove.prompt <CR>
 inoremap <silent><expr> <TAB>
 			\ pumvisible() ? coc#_select_confirm() :
 			\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
@@ -87,47 +75,11 @@ function! s:check_back_space() abort
 endfunction
 let g:coc_snippet_next = '<tab>'
 
-" fzf
-nmap <silent> <Leader>p :Files <CR>
-nmap <silent> <Leader>b :Buffers <CR>
-nmap <silent> <Leader>q :bd <CR>
+" coc keymap for Go
+autocmd FileType go nmap gta :CocCommand go.tags.add.prompt <CR>
+autocmd FileType go nmap gtr :CocCommand go.tags.remove.prompt <CR>
 
-" lightline
-let g:lightline = {
-			\	'colorscheme': 'nord',
-			\	'active': {
-			\		'left': [ 
-			\			[ 'mode', 'paste' ],
-			\			[ 'gitbranch', 'readonly', 'filename', 'modified' ],
-			\		],
-			\		'right': [
-			\			[ 'coc_info', 'coc_hints', 'coc_errors', 'coc_warnings', 'coc_ok'],
-			\			[ 'coc_status' ],
-			\			[ 'lineinfo' ],
-			\			[ 'percent' ],
-			\			[ 'fileformat', 'fileencoding', 'filetype' ]
-			\		]
-			\	},
-			\	'tabline': {
-			\		'left': [
-			\			[ 'buffers' ]
-			\		],
-			\		'right': [
-			\			[]
-			\		]
-			\	},
-			\	'component_expand': {
-			\		'buffers': 'lightline#bufferline#buffers'
-			\	},
-			\	'component_function': {
-			\		'gitbranch': 'fugitive#head',
-			\	},
-			\	'component_raw': {
-			\		'buffers': 1
-			\	},
-			\	'component_type': {
-			\		'buffers': 'tabsel'
-			\	}
-			\ }
-let g:lightline#bufferline#clickable = 1
-call lightline#coc#register()
+" fzf
+nnoremap <silent> <Leader>p :Files <CR>
+nnoremap <silent> <Leader>b :Buffers <CR>
+nnoremap <silent> <Leader>q :bd <CR>
