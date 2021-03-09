@@ -2,3 +2,5 @@
 	email = zasdaym@gmail.com
 	name = Zasda Yusuf Mikail
 	signingkey = E237E88CEDCFC7AE
+[pull]
+	rebase = false
