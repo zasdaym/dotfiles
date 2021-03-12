@@ -35,3 +35,5 @@ ln -fsn "${PWD}/alacritty" "${HOME}/.config/alacritty"
 ln -fsn "${PWD}/git" "${HOME}/.config/git"
 ln -fsn "${PWD}/nvim" "${HOME}/.config/nvim"
 ln -fsn "${PWD}/tmux" "${HOME}/.config/tmux"
+
+echo OK
