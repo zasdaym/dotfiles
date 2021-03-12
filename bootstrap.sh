@@ -14,6 +14,12 @@ for program in ${programs[@]}; do
 	fi
 done
 
+# ssh setup
+if [[ ! -f ${HOME}/.ssh/id_rsa ]]; then
+	mkdir -p ${HOME}/.ssh
+	openssl enc -d -aes-256-cbc -iter 6 -in ssh/ssh.tar.gz.encrypted | tar -xz -C ${HOME}/.ssh/
+fi
+
 # check zsh
 if [[ ${SHELL} != "/bin/zsh" ]]; then
 	chsh -s /bin/zsh
