@@ -40,6 +40,7 @@ ln -fsn "${PWD}/.zshrc" "${HOME}/.zshrc"
 ln -fsn "${PWD}/alacritty" "${HOME}/.config/alacritty"
 ln -fsn "${PWD}/git" "${HOME}/.config/git"
 ln -fsn "${PWD}/nvim" "${HOME}/.config/nvim"
+ln -fsn "${PWD}/rofi" "${HOME}/.config/rofi"
 ln -fsn "${PWD}/tmux" "${HOME}/.config/tmux"
 
 echo OK

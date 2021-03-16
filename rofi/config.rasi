@@ -1,0 +1,7 @@
+configuration {
+	combi-hide-mode-prefix: true;
+	combi-modi: "window,drun";
+	font: "JetBrains Mono 12";
+	modi: "combi";
+	theme: "nord";
+}
