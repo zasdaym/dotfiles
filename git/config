@@ -4,3 +4,5 @@
 	signingkey = E237E88CEDCFC7AE
 [pull]
 	rebase = false
+[url "git@github.com:"]
+	insteadOf = https://github.com/
