@@ -50,7 +50,6 @@ let g:coc_global_extensions = [
 			\'coc-json',
 			\'coc-pairs',
 			\'coc-snippets',
-			\'coc-svelte',
 			\'coc-yaml',
 			\]
 
