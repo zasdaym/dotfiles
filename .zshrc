@@ -1,3 +1,6 @@
+# path
+export PATH=${HOME}/go/bin:${PATH}
+
 # oh-my-zsh
 export ZSH="${HOME}/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
