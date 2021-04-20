@@ -30,11 +30,6 @@ if [[ ! -d ${HOME}/.oh-my-zsh ]]; then
 	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 fi
 
-# check asdf
-if [[ ! -d ${HOME}/.asdf ]]; then
-	git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
-fi
-
 # check tpm
 if [[ ! -d "${HOME}/.tmux/plugins/tpm" ]]; then
 	git clone https://github.com/tmux-plugins/tpm.git "${HOME}/.tmux/plugins/tpm"
