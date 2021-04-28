@@ -1,6 +1,8 @@
 brew "fzf"
 brew "jq"
-brew "yq"
+brew "jsonnet"
+
+brew "gh"
 
 brew "golang"
 brew "nodejs"
