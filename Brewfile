@@ -11,6 +11,7 @@ brew "yarn"
 brew "kubectl"
 brew "kubectx"
 brew "int128/kubelogin/kubelogin"
+brew "kubeseal"
 
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
