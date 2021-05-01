@@ -38,7 +38,7 @@ let g:netrw_dirhistmax = 0
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 " fzf
 nmap <silent> <Leader>p :Files <CR>

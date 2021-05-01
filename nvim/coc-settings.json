@@ -1,32 +1,3 @@
 {
-	"go.goplsOptions": {
-		"usePlaceholders": true
-	},
-	"languageserver": {
-		"terraform": {
-			"command": "terraform-ls",
-			"args": [
-				"serve"
-			],
-			"filetypes": [
-				"terraform",
-				"tf"
-			],
-			"initializationOptions": {},
-			"settings": {}
-		}
-	},
-	"list.source.symbols.excludes": [
-		"/usr/local/**"
-	],
-	"suggest.noselect": false,
-	"yaml.format.enable": true,
-	"yaml.schemas": {
-		"http://json.schemastore.org/github-workflow": [
-			".github/workflows/*.yaml"
-		],
-		"http://json.schemastore.org/gitlab-ci": [
-			".gitlab-ci.yml"
-		]
-	}
+	"yaml.format.enable": true
 }
