@@ -1,3 +1,6 @@
+# path
+path=("${HOME}/go/bin" $path)
+
 # brew
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
@@ -13,3 +16,6 @@ alias vim="nvim"
 # exported variables
 export EDITOR="nvim"
 export FZF_DEFAULT_OPTS="--no-color"
+
+# prune path
+typeset -U path
