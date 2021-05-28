@@ -8,12 +8,11 @@ brew "golang"
 brew "nodejs"
 brew "yarn"
 
-brew "kubectl"
+brew "kubernetes-cli"
 brew "kubectx"
+brew "minikube"
 brew "int128/kubelogin/kubelogin"
 brew "kubeseal"
 
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
-
-brew "awscli"

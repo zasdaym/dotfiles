@@ -1,5 +1,5 @@
 # path
-path=("${HOME}/go/bin" $path)
+path=("${HOME}/go/bin" "${HOME}/.local/bin" $path)
 
 # brew
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
