@@ -29,7 +29,6 @@ set number relativenumber
 set splitright splitbelow
 set shortmess+=c
 set termguicolors
-set ts=4 sts=4 sw=4
 colorscheme nord
 
 " disable netrw
