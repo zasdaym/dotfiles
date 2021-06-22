@@ -10,6 +10,7 @@ unlet autoload_plug_path
 " plugins
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
@@ -28,14 +29,19 @@ set noshowmode
 set number relativenumber
 set splitright splitbelow
 set shortmess+=c
+
+" color
+let g:gruvbox_contrast_dark = "hard"
+let g:gruvbox_contrast_light = "hard"
 set termguicolors
 colorscheme nord
+
 
 " disable netrw
 let g:netrw_dirhistmax = 0
 
 " vim-airline
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline_powerline_fonts = 0
 
 " fzf
