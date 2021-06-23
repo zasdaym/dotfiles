@@ -14,6 +14,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'sheerun/vim-polyglot'
+Plug 'tomasiser/vim-code-dark'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -32,7 +33,7 @@ set shortmess+=c
 
 " color
 set termguicolors
-colorscheme gruvbox8_hard
+colorscheme codedark
 
 " disable netrw
 let g:netrw_dirhistmax = 0
@@ -40,7 +41,6 @@ let g:netrw_dirhistmax = 0
 " vim-airline
 let g:airline#extensions#tabline#enabled = 0
 let g:airline_powerline_fonts = 0
-let g:airline_theme = 'gruvbox8'
 let g:airline_section_z = airline#section#create_right(['%l|%c'])
 
 " fzf
