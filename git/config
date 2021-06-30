@@ -1,7 +1,7 @@
 [user]
 	email = zasdaym@gmail.com
 	name = Zasda Yusuf Mikail
-	signingkey = E237E88CEDCFC7AE
+	signingkey = B81F4C268943495E
 [pull]
 	rebase = false
 [url "git@github.com:"]
