@@ -12,7 +12,6 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'lifepillar/vim-gruvbox8'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomasiser/vim-code-dark'
 Plug 'tpope/vim-commentary'
