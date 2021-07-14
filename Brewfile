@@ -9,10 +9,9 @@ brew "nodejs"
 brew "yarn"
 
 brew "kubernetes-cli"
-brew "kubectx"
+brew "krew"
 brew "helm"
 brew "minikube"
-brew "int128/kubelogin/kubelogin"
 brew "kubeseal"
 
 brew "hashicorp/tap/terraform"
