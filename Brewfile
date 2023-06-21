@@ -44,6 +44,7 @@ brew "minikube"
 # HashiCorp
 brew "nomad"
 brew "terraform"
+brew "terragrunt"
 brew "vault"
 
 # Misc
