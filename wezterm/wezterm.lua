@@ -11,7 +11,8 @@ return {
 		},
 	},
 	font = wezterm.font_with_fallback({"JetBrains Mono", "Menlo"}),
-	font_size = 13,
+	font_size = 14,
+	front_end = "WebGpu",
 	keys = {
 		{
 			mods = 'CMD',
