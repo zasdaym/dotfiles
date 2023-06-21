@@ -1,0 +1,10 @@
+[gpg]
+	format = ssh
+[user]
+	email = zasdaym@gmail.com
+	name = Zasda Yusuf Mikail
+	signingkey = ~/.ssh/id_ed25519.pub
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main

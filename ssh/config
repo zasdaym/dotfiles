@@ -1,0 +1,9 @@
+Include ~/.orbstack/ssh/config
+
+Host *
+	ForwardAgent yes
+	LogLevel ERROR
+	StrictHostKeyChecking no
+	UserKnownHostsFile /dev/null
+	ServerAliveInterval 300
+	ServerAliveCountMax 2

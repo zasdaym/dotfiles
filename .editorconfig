@@ -1,0 +1,13 @@
+root = true
+
+[*.fish]
+indent_size = 4
+indent_style = space
+
+[*.lua]
+indent_size = 2
+indent_style = space
+
+[*.sh]
+indent_size = 2
+indent_style = tab
