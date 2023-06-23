@@ -8,10 +8,15 @@ return {
 				bg_color = '#1e1e1e',
 				fg_color = '#cccccc',
 			},
+			inactive_tab_hover = {
+				bg_color = '#1e1e1e',
+				fg_color = '#cccccc',
+        italic = false,
+			}
 		},
 	},
-	font = wezterm.font_with_fallback({"JetBrains Mono", "Menlo"}),
-	font_size = 14,
+	font = wezterm.font_with_fallback({"Berkeley Mono", "JetBrains Mono", "Menlo"}),
+	font_size = 13,
 	front_end = "WebGpu",
 	keys = {
 		{
