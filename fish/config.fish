@@ -38,6 +38,7 @@ end
 
 if status is-interactive
     set fish_greeting ""
+    set -gx CLOUDSDK_CONFIG "$HOME/.null"
     set -gx EDITOR nvim
     set -gx FZF_DEFAULT_OPTS --no-color
     set -gx TF_PLUGIN_CACHE_DIR "$HOME/.terraform.d/plugin-cache"
