@@ -43,9 +43,9 @@ if [[ ! -f "${HOME}/.ssh/id_ed25519" ]]; then
 	sudo chmod -R 700 "${HOME}/.ssh"
 fi
 
-# Run macOS specific script
+# Run macOS-specific script
 if [[ "$(uname -s)" == "Darwin" ]]; then
-	./macos.sh
+	./darwin.sh
 fi
 
 # Install Homebrew if not installed
