@@ -58,3 +58,6 @@ defaults write com.apple.Spotlight orderedItems -array \
 
 # Force reload System Preferences
 sudo pkill -1 'System Preferences'
+
+# Copy font
+cp BerkeleyMono-Regular.otf ~/Library/Fonts/
