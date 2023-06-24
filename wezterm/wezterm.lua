@@ -32,7 +32,6 @@ return {
 			inactive_tab_hover = {
 				bg_color = background_color,
 				fg_color = foreground_color,
-        italic = false,
 			}
 		},
 	},
