@@ -32,6 +32,7 @@ brew "fnm"
 brew "rustup"
 
 # Container
+brew "argocd"
 brew "helm"
 brew "istioctl"
 brew "knative/client/kn"
