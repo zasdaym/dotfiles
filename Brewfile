@@ -54,6 +54,7 @@ brew "exercism"
 brew "grpcurl"
 
 # Cask
+cask "alacritty"
 cask "homebrew/cask-fonts/font-jetbrains-mono"
 cask "google-chrome"
 cask "google-cloud-sdk"
