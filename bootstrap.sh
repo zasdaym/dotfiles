@@ -16,6 +16,7 @@ done
 
 # Create required directories
 mkdir -p "${HOME}/.aws"
+mkdir -p "${HOME}/.config/alacritty"
 mkdir -p "${HOME}/.config/fish"
 mkdir -p "${HOME}/.config/git"
 mkdir -p "${HOME}/.config/nvim"
@@ -24,13 +25,14 @@ mkdir -p "${HOME}/.kube"
 mkdir -p "${HOME}/.ssh"
 
 # Symlink config files
-ln -fsn "${PWD}/fish/config.fish" "${HOME}/.config/fish/config.fish"
-ln -fsn "${PWD}/fish/fish_plugins" "${HOME}/.config/fish/fish_plugins"
-ln -fsn "${PWD}/git/config" "${HOME}/.config/git/config"
-ln -fsn "${PWD}/nvim/init.lua" "${HOME}/.config/nvim/init.lua"
-ln -fsn "${PWD}/ssh/config" "${HOME}/.ssh/config"
-ln -fsn "${PWD}/starship/starship.toml" "${HOME}/.config/starship.toml"
-ln -fsn "${PWD}/wezterm/wezterm.lua" "${HOME}/.config/wezterm/wezterm.lua"
+ln -fns "${PWD}/alacritty/alacritty.yml" "${HOME}/.config/alacritty/alacritty.yml"
+ln -fns "${PWD}/fish/config.fish" "${HOME}/.config/fish/config.fish"
+ln -fns "${PWD}/fish/fish_plugins" "${HOME}/.config/fish/fish_plugins"
+ln -fns "${PWD}/git/config" "${HOME}/.config/git/config"
+ln -fns "${PWD}/nvim/init.lua" "${HOME}/.config/nvim/init.lua"
+ln -fns "${PWD}/ssh/config" "${HOME}/.ssh/config"
+ln -fns "${PWD}/starship/starship.toml" "${HOME}/.config/starship.toml"
+ln -fns "${PWD}/wezterm/wezterm.lua" "${HOME}/.config/wezterm/wezterm.lua"
 
 # Dummy file to hide additional prompt
 touch "${HOME}/.null"
