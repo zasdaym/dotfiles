@@ -25,10 +25,10 @@ mkdir -p "${HOME}/.kube"
 mkdir -p "${HOME}/.ssh"
 
 # Symlink config files
-ln -fns "${PWD}/alacritty/alacritty.yml" "${HOME}/.config/alacritty/alacritty.yml"
 ln -fns "${PWD}/fish/config.fish" "${HOME}/.config/fish/config.fish"
 ln -fns "${PWD}/fish/fish_plugins" "${HOME}/.config/fish/fish_plugins"
 ln -fns "${PWD}/git/config" "${HOME}/.config/git/config"
+ln -fns "${PWD}/kitty/kitty.conf" "${HOME}/.config/kitty/kitty.conf"
 ln -fns "${PWD}/nvim/init.lua" "${HOME}/.config/nvim/init.lua"
 ln -fns "${PWD}/ssh/config" "${HOME}/.ssh/config"
 ln -fns "${PWD}/starship/starship.toml" "${HOME}/.config/starship.toml"

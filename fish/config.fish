@@ -36,6 +36,12 @@ if test -e "/Applications/Tailscale.app/Contents/MacOS/Tailscale"
     end
 end
 
+if test -n "$KITTY_PID"
+    function ssh
+        kitty +kitten ssh $argv
+    end
+end
+
 if status is-interactive
     set fish_greeting ""
     set -gx CLOUDSDK_CONFIG "$HOME/.null"
