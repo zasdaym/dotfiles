@@ -60,4 +60,4 @@ defaults write com.apple.Spotlight orderedItems -array \
 sudo pkill -1 'System Preferences'
 
 # Copy fonts
-cp fonts/*.ttf ~/Library/Fonts/
+cp fonts/*.otf ~/Library/Fonts/
