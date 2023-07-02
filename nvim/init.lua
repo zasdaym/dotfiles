@@ -37,21 +37,62 @@ require('lazy').setup({
   },
   {
     "nvim-telescope/telescope.nvim",
-    tag = '0.1.1',
+    tag = '0.1.2',
     dependencies = {
       "nvim-lua/plenary.nvim" ,
-      "nvim-treesitter/nvim-treesitter",
       "nvim-telescope/telescope-fzy-native.nvim",
       "nvim-telescope/telescope-ui-select.nvim",
     },
-    build = ":TSUpdate",
     config = function()
       require("telescope").load_extension("fzy_native")
       require("telescope").load_extension("ui-select")
     end,
   },
   {
-    "sheerun/vim-polyglot",
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = {
+          "bash",
+          "dockerfile",
+          "fish",
+          "git_config",
+          "git_rebase",
+          "gitattributes",
+          "gitcommit",
+          "gitignore",
+          "go",
+          "gomod",
+          "hcl",
+          "javascript",
+          "json",
+          "lua",
+          "markdown",
+          "markdown_inline",
+          "make",
+          "proto",
+          "python",
+          "sql",
+          "terraform",
+          "toml",
+          "yaml",
+        },
+        indent = {
+          enable = true
+        },
+        highlight = {
+          enable = true,
+          disable = function(lang, buf)
+            local max_filesize = 100 * 1024 -- 100 KB
+            local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+            if ok and stats and stats.size > max_filesize then
+              return true
+            end
+          end,
+        },
+      })
+    end
   },
 })
 
@@ -82,6 +123,12 @@ vim.opt.undodir = vim.fn.stdpath("data") .. "undo"
 vim.opt.tabstop = 4
 vim.opt.softtabstop = -1
 vim.opt.shiftwidth = 4
+
+vim.api.nvim_create_autocmd('Filetype', {
+  group = vim.api.nvim_create_augroup('setIndent', {}),
+  pattern = { 'javascript', 'typescript', 'hcl' },
+  command = 'setlocal tabstop=2 shiftwidth=2 expandtab'
+})
 
 -- Keymap
 vim.g.mapleader = ","
