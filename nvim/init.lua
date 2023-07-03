@@ -50,8 +50,12 @@ require('lazy').setup({
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "pfeiferj/nvim-hurl",
+    },
     build = ":TSUpdate",
     config = function()
+      require("hurl").setup()
       require("nvim-treesitter.configs").setup({
         ensure_installed = {
           "bash",
@@ -65,6 +69,7 @@ require('lazy').setup({
           "go",
           "gomod",
           "hcl",
+          "hurl",
           "javascript",
           "json",
           "lua",
@@ -78,8 +83,11 @@ require('lazy').setup({
           "toml",
           "yaml",
         },
+        incremental_selection = {
+          enable = true,
+        },
         indent = {
-          enable = true
+          enable = true,
         },
         highlight = {
           enable = true,
@@ -92,7 +100,7 @@ require('lazy').setup({
           end,
         },
       })
-    end
+    end,
   },
 })
 
