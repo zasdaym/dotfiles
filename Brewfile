@@ -30,8 +30,8 @@ brew "jq"
 brew "yq"
 
 # Programming
-brew "go"
 brew "fnm"
+brew "go"
 brew "rustup"
 
 # Container
