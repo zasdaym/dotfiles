@@ -22,8 +22,6 @@ return {
   font_size = 14,
   front_end = "WebGpu",
   hide_tab_bar_if_only_one_tab = true,
-  initial_cols = 160,
-  initial_rows = 50,
   keys = {
     {
       mods = 'CMD',
