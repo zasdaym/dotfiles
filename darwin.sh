@@ -25,7 +25,7 @@ defaults delete -g ApplePressAndHoldEnabled
 
 # Finder
 defaults write -g AppleShowAllExtensions -bool true
-defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder FXPreferredViewStyle Nlsv
 defaults write com.apple.finder NewWindowTargetPath -string "file://{$HOME}/"
 defaults write com.apple.Finder AppleShowAllFiles -bool false
 defaults write com.apple.finder ShowStatusBar -bool true
