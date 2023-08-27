@@ -1,6 +1,7 @@
 # Basic
 brew "bat"
 brew "btop"
+brew "d2"
 brew "exa"
 brew "fd"
 brew "fish"
