@@ -1,4 +1,4 @@
-fish_add_path $HOME/.krew/bin $HOME/go/bin /opt/homebrew/opt/openssl@1.1/bin /opt/homebrew/bin /opt/homebrew/sbin
+fish_add_path $HOME/.krew/bin $HOME/go/bin /opt/homebrew/postgresql@16/bin /opt/homebrew/opt/openssl@1.1/bin /opt/homebrew/bin /opt/homebrew/sbin
 
 function glog
     git log --oneline --decorate --graph $argv
@@ -54,4 +54,5 @@ if status is-interactive
     starship init fish | source
     fnm env --use-on-cd | source
     zoxide init fish | source
+	docker completion fish | source
 end
