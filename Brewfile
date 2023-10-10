@@ -47,19 +47,19 @@ brew "kubeseal"
 brew "minikube"
 
 # HashiCorp
-brew "nomad"
-brew "terraform"
+brew "hashicorp/tap/nomad"
+brew "hashicorp/tap/terraform"
+brew "hashicorp/tap/vault"
 brew "terragrunt"
-brew "vault"
 
 # Misc
 brew "awscli@2"
 brew "exercism"
 
 # Cask
-cask "homebrew/cask-fonts/font-jetbrains-mono"
+cask "brave-browser"
 cask "google-chrome"
 cask "google-cloud-sdk"
-cask "kitty"
 cask "orbstack"
 cask "visual-studio-code"
+cask "wezterm"
