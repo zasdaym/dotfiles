@@ -1,5 +1,6 @@
 # Basic
 brew "bat"
+brew "bore-cli"
 brew "btop"
 brew "d2"
 brew "exa"
