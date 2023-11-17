@@ -46,6 +46,8 @@ brew "krew"
 brew "kubernetes-cli"
 brew "kubeseal"
 brew "minikube"
+brew "carvel-dev/carvel/kapp"
+brew "carvel-dev/carvel/ytt"
 
 # HashiCorp
 brew "hashicorp/tap/nomad"
