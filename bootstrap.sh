@@ -16,7 +16,6 @@ done
 
 # Create required directories
 mkdir -p "${HOME}/.aws"
-mkdir -p "${HOME}/.config/alacritty"
 mkdir -p "${HOME}/.config/fish"
 mkdir -p "${HOME}/.config/git"
 mkdir -p "${HOME}/.config/nvim"
