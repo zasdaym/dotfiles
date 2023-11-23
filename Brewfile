@@ -60,9 +60,7 @@ brew "awscli@2"
 brew "exercism"
 
 # Cask
-cask "brave-browser"
 cask "google-chrome"
-cask "google-cloud-sdk"
 cask "orbstack"
 cask "visual-studio-code"
 cask "wezterm"
