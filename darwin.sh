@@ -13,12 +13,18 @@ defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock tilesize -integer 32
 killall Dock
 
-echo "Enable four fingers swipe"
-echo "Enable two fingers secondary click"
-echo "Enable three finger drag (Accessibility)"
-echo "Show battery percentage in menu bar"
-echo "Set max keyboard repeat rate"
-echo "Set minimal initial keyboard repeat delay"
+# Trackpad
+defaults write com.apple.AppleBluetoothMultitouchTrackpad Clicking -bool true
+defaults write com.apple.AppleBluetoothMultitouchTrackpad TrackpadRightClick -bool true
+defaults write com.apple.AppleBluetoothMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+
+# Fast keyboard
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Show battery percentage in menu bar
+
+# Remove Spotlight in menu bar
 
 # Copy fonts
 cp fonts/*.ttf ~/Library/Fonts/
