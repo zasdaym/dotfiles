@@ -62,5 +62,6 @@ brew "exercism"
 # Cask
 cask "google-chrome"
 cask "orbstack"
+cask "slack"
 cask "visual-studio-code"
 cask "wezterm"
