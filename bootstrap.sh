@@ -28,7 +28,6 @@ mkdir -p "${HOME}/.ssh"
 ln -fns "${PWD}/fish/config.fish" "${HOME}/.config/fish/config.fish"
 ln -fns "${PWD}/fish/fish_plugins" "${HOME}/.config/fish/fish_plugins"
 ln -fns "${PWD}/git/config" "${HOME}/.config/git/config"
-ln -fns "${PWD}/kitty/kitty.conf" "${HOME}/.config/kitty/kitty.conf"
 ln -fns "${PWD}/nvim/init.lua" "${HOME}/.config/nvim/init.lua"
 ln -fns "${PWD}/ssh/config" "${HOME}/.ssh/config"
 ln -fns "${PWD}/starship/starship.toml" "${HOME}/.config/starship.toml"
@@ -37,13 +36,6 @@ ln -fns "${PWD}/wezterm/wezterm.lua" "${HOME}/.config/wezterm/wezterm.lua"
 # Dummy file to hide additional prompt
 touch "${HOME}/.null"
 sudo chmod 600 "${HOME}/.null"
-
-# SSH private key
-if [[ ! -f "${HOME}/.ssh/id_ed25519" ]]; then
-	openssl enc -d -aes-256-cfb8 -pbkdf2 -iter 650000 -in ssh/id_ed25519.enc -out "${HOME}/.ssh/id_ed25519"
-	ssh-keygen -y -f "${HOME}/.ssh/id_ed25519" >"${HOME}/.ssh/id_ed25519.pub"
-	sudo chmod -R 700 "${HOME}/.ssh"
-fi
 
 # Run macOS-specific script
 if [[ "$(uname -s)" == "Darwin" ]]; then
@@ -54,7 +46,17 @@ fi
 if [[ ! -f "/opt/homebrew/bin/brew" ]]; then
 	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	eval "$(/opt/homebrew/bin/brew shellenv)"
-	brew bundle
+	# brew bundle
+fi
+
+# Install openssl
+brew install openssl
+
+# SSH private key
+if [[ ! -f "${HOME}/.ssh/id_ed25519" ]]; then
+	/opt/homebrew/bin/openssl enc -d -aes-256-cfb8 -pbkdf2 -iter 650000 -in ssh/id_ed25519.enc -out "${HOME}/.ssh/id_ed25519"
+	sudo chmod -R 700 "${HOME}/.ssh"
+	ssh-keygen -y -f "${HOME}/.ssh/id_ed25519" >"${HOME}/.ssh/id_ed25519.pub"
 fi
 
 # Make sure fish added to /etc/shells
