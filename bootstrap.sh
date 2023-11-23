@@ -48,17 +48,16 @@ if [[ ! -f "/opt/homebrew/bin/brew" ]]; then
 	# brew bundle
 fi
 
-# Install openssl
-brew install openssl
+# Make sure fish added to /etc/shells
+if [[ ! $(grep -Fxq "/opt/homebrew/bin/fish" /etc/shells) ]]; then
+	echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
+fi
 
-# SSH private key
+# SSH
+brew install openssl
 if [[ ! -f "${HOME}/.ssh/id_ed25519" ]]; then
 	/opt/homebrew/bin/openssl enc -d -aes-256-cfb8 -pbkdf2 -iter 650000 -in ssh/id_ed25519.enc -out "${HOME}/.ssh/id_ed25519"
 	sudo chmod -R 700 "${HOME}/.ssh"
 	ssh-keygen -y -f "${HOME}/.ssh/id_ed25519" >"${HOME}/.ssh/id_ed25519.pub"
 fi
 
-# Make sure fish added to /etc/shells
-if [[ ! $(grep -Fxq "/opt/homebrew/bin/fish" /etc/shells) ]]; then
-	echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
-fi
