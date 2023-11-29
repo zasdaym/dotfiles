@@ -59,6 +59,7 @@ brew "terragrunt"
 # Misc
 brew "awscli@2"
 brew "exercism"
+brew "go-task"
 
 # Cask
 cask "google-chrome"
