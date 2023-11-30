@@ -63,3 +63,4 @@ if [[ ! -f "${HOME}/.ssh/id_ed25519" ]]; then
 	ssh-keygen -y -f "${HOME}/.ssh/id_ed25519" >"${HOME}/.ssh/id_ed25519.pub"
 fi
 
+echo "Run `brew bundle` to install all packages"
