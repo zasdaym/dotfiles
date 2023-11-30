@@ -2,6 +2,7 @@
 brew "bat"
 brew "bore-cli"
 brew "btop"
+brew "croc"
 brew "d2"
 brew "exa"
 brew "fd"
