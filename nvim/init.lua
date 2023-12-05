@@ -77,6 +77,7 @@ require('lazy').setup({
           "markdown_inline",
           "make",
           "proto",
+          "puppet",
           "python",
           "sql",
           "terraform",
