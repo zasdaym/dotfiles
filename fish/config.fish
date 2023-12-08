@@ -30,6 +30,10 @@ function aws_ssm_start_session
     aws ssm start-session --target $instance_id
 end
 
+function curl_time
+    curl -o /dev/null -s -w '%{time_total} s\n' $argv
+end
+
 if test -e "/Applications/Tailscale.app/Contents/MacOS/Tailscale"
     function tailscale
         /Applications/Tailscale.app/Contents/MacOS/Tailscale $argv
