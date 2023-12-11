@@ -135,7 +135,7 @@ vim.opt.shiftwidth = 4
 
 vim.api.nvim_create_autocmd('Filetype', {
   group = vim.api.nvim_create_augroup('setIndent', {}),
-  pattern = { 'javascript', 'typescript', 'hcl' },
+  pattern = { 'javascript', 'puppet', 'typescript', 'hcl' },
   command = 'setlocal tabstop=2 shiftwidth=2 expandtab'
 })
 
