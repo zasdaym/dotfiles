@@ -26,12 +26,12 @@ return {
     {
       mods = 'CMD',
       key = 'd',
-      action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+      action = wezterm.action.SplitHorizontal,
     },
     {
       mods = 'CMD',
       key = 'D',
-      action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+      action = wezterm.action.SplitVertical,
     },
   },
   native_macos_fullscreen_mode = true,
