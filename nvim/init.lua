@@ -79,6 +79,7 @@ require('lazy').setup({
           "proto",
           "puppet",
           "python",
+          "scheme",
           "sql",
           "terraform",
           "toml",
