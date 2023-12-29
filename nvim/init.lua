@@ -89,7 +89,7 @@ require('lazy').setup({
           enable = true,
         },
         indent = {
-          enable = true,
+          enable = false,
         },
         highlight = {
           enable = true,
@@ -130,14 +130,20 @@ vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath("data") .. "undo"
 
 -- Indentation
-vim.opt.tabstop = 4
-vim.opt.softtabstop = -1
+vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 
 vim.api.nvim_create_autocmd('Filetype', {
   group = vim.api.nvim_create_augroup('setIndent', {}),
   pattern = { 'javascript', 'puppet', 'typescript', 'hcl' },
   command = 'setlocal tabstop=2 shiftwidth=2 expandtab'
+})
+
+vim.filetype.add({
+  extension = {
+    sls = "yaml"
+  }
 })
 
 -- Keymap
