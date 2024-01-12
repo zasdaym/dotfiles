@@ -63,7 +63,7 @@ brew "exercism"
 brew "go-task"
 
 # Cask
-cask "google-chrome"
+cask "brave-browser"
 cask "orbstack"
 cask "slack"
 cask "visual-studio-code"
