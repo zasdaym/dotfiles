@@ -1,4 +1,4 @@
-fish_add_path $HOME/.bun/bin $HOME/.krew/bin $HOME/go/bin /opt/homebrew/postgresql@16/bin /opt/homebrew/opt/openssl@1.1/bin /opt/homebrew/bin /opt/homebrew/sbin
+fish_add_path $HOME/.bun/bin $HOME/.krew/bin $HOME/go/bin /opt/homebrew/opt/ruby/bin /opt/homebrew/postgresql@16/bin /opt/homebrew/opt/openssl@1.1/bin /opt/homebrew/bin /opt/homebrew/sbin
 
 function glog
     git log --oneline --decorate --graph $argv
@@ -45,6 +45,8 @@ if test -n "$KITTY_PID"
         kitty +kitten ssh $argv
     end
 end
+
+fish_add_path /opt/homebrew/lib/ruby/gems/$(ruby --version | awk '{print $2}')/bin
 
 if status is-interactive
     set fish_greeting ""

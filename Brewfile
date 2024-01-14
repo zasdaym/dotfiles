@@ -36,6 +36,7 @@ brew "yq"
 brew "fnm"
 brew "go"
 brew "oven-sh/bun/bun"
+brew "ruby"
 brew "rustup"
 
 # Container
