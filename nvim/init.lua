@@ -60,6 +60,7 @@ require('lazy').setup({
         ensure_installed = {
           "bash",
           "dockerfile",
+          "elixir",
           "fish",
           "git_config",
           "git_rebase",
