@@ -33,6 +33,7 @@ brew "jq"
 brew "yq"
 
 # Programming
+brew "elixir"
 brew "fnm"
 brew "go"
 brew "oven-sh/bun/bun"
