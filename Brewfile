@@ -39,7 +39,7 @@ brew "fnm"
 brew "go"
 brew "oven-sh/bun/bun"
 brew "ruby"
-brew "rustup"
+brew "rustup-init"
 
 # Container
 brew "argocd"
