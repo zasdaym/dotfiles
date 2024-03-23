@@ -61,6 +61,7 @@ brew "hashicorp/tap/vault"
 brew "terragrunt"
 
 # Misc
+brew "anchordotdev/tap/anchor"
 brew "awscli@2"
 brew "exercism"
 brew "go-task"
