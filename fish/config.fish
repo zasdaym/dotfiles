@@ -1,4 +1,4 @@
-fish_add_path $HOME/.bun/bin $HOME/.cargo/bin $HOME/.krew/bin $HOME/go/bin /opt/homebrew/opt/ruby/bin /opt/homebrew/postgresql@16/bin /opt/homebrew/opt/openssl@1.1/bin /opt/homebrew/bin /opt/homebrew/sbin
+fish_add_path $HOME/.bun/bin $HOME/.cargo/bin $HOME/.krew/bin $HOME/go/bin /opt/homebrew/opt/curl/bin /opt/homebrew/opt/ruby/bin /opt/homebrew/postgresql@16/bin /opt/homebrew/opt/openssl@1.1/bin /opt/homebrew/bin /opt/homebrew/sbin
 
 function glog
     git log --oneline --decorate --graph $argv
