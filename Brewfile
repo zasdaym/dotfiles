@@ -66,6 +66,7 @@ brew "exercism"
 brew "go-task"
 
 # Cask
+cask "betterdisplay"
 cask "brave-browser"
 cask "orbstack"
 cask "raycast"
