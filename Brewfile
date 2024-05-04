@@ -38,6 +38,7 @@ brew "elixir"
 brew "fnm"
 brew "go"
 brew "oven-sh/bun/bun"
+brew "pipx"
 brew "ruby"
 brew "rustup-init"
 
