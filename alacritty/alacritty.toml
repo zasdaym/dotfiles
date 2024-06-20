@@ -6,6 +6,9 @@ size = 14.0
 [font.normal]
 family = "Berkeley Mono"
 
+[window]
+opacity = 0.999
+
 [window.padding]
 x = 10
 
