@@ -10,7 +10,7 @@ family = "Berkeley Mono"
 opacity = 0.999
 
 [window.padding]
-x = 10
+x = 5
 
 [keyboard]
 bindings = [
