@@ -18,32 +18,37 @@ bindings = [
   { key = "Tab", mods = "Control|Shift", action = "SelectPreviousTab" },
 ]
 
-
-# Name: VS Code Dark+
-[colors.primary]
-background = "#1E1E1E"
-foreground = "#D4D4D4"
-
-[colors.cursor]
-text = "#1d1f21"
-cursor = "#cccccc"
-
-[colors.normal]
-black = "#000000"
-red = "#cd3131"
-green = "#0dbc79"
-yellow = "#e5e510"
-blue = "#2472c8"
-magenta = "#bc3fbc"
-cyan = "#11a8cd"
-white = "#e5e5e5"
+[colors]
+draw_bold_text_with_bright_colors = true
 
 [colors.bright]
-black = "#666666"
-red = "#f14c4c"
-green = "#23d18b"
-yellow = "#f5f543"
-blue = "#3b8eea"
-magenta = "#d670d6"
-cyan = "#29b8db"
-white = "#e5e5e5"
+black = '#666666'
+blue = '#3b8eea'
+cyan = '#29b8db'
+green = '#23d18b'
+magenta = '#d670d6'
+red = '#f14c4c'
+white = '#e5e5e5'
+yellow = '#f5f543'
+
+[colors.cursor]
+cursor = '#ffffff'
+text = '#000000'
+
+[colors.normal]
+black = '#000000'
+blue = '#2472c8'
+cyan = '#11a8cd'
+green = '#0dbc79'
+magenta = '#bc3fbc'
+red = '#cd3131'
+white = '#e5e5e5'
+yellow = '#e5e510'
+
+[colors.primary]
+background = '#1e1e1e'
+foreground = '#cccccc'
+
+[colors.selection]
+background = '#3a3d41'
+text = '#e0e0e0'
