@@ -12,6 +12,13 @@ opacity = 0.999
 [window.padding]
 x = 10
 
+[keyboard]
+bindings = [
+  { key = "Tab", mods = "Control", action = "SelectNextTab" },
+  { key = "Tab", mods = "Control|Shift", action = "SelectPreviousTab" },
+]
+
+
 # Name: VS Code Dark+
 [colors.primary]
 background = "#1E1E1E"
