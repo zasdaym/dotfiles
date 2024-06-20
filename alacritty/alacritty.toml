@@ -8,7 +8,6 @@ family = "Berkeley Mono"
 
 [window.padding]
 x = 10
-y = 5
 
 # Name: VS Code Dark+
 [colors.primary]

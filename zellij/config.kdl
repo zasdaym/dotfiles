@@ -1,0 +1,10 @@
+default_shell "/opt/homebrew/bin/fish"
+theme "one-half-dark"
+pane_frames false
+simplified_ui true
+
+ui {
+    pane_frames {
+        hide_session_name true
+    }
+}

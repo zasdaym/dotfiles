@@ -21,6 +21,7 @@ mkdir -p "${HOME}/.config/git"
 mkdir -p "${HOME}/.config/helix"
 mkdir -p "${HOME}/.config/nvim"
 mkdir -p "${HOME}/.config/wezterm"
+mkdir -p "${HOME}/.config/zellij/layouts"
 mkdir -p "${HOME}/.kube"
 mkdir -p "${HOME}/.ssh"
 
@@ -34,6 +35,8 @@ ln -fns "${PWD}/nvim/init.lua" "${HOME}/.config/nvim/init.lua"
 ln -fns "${PWD}/ssh/config" "${HOME}/.ssh/config"
 ln -fns "${PWD}/starship/starship.toml" "${HOME}/.config/starship.toml"
 ln -fns "${PWD}/wezterm/wezterm.lua" "${HOME}/.config/wezterm/wezterm.lua"
+ln -fns "${PWD}/zellij/config.kdl" "${HOME}/.config/zellij/zellij.kdl"
+ln -fns "${PWD}/zellij/layouts/default.kdl" "${HOME}/.config/zellij/layouts/default.kdl"
 
 # Dummy file to hide additional prompt
 touch "${HOME}/.null"
