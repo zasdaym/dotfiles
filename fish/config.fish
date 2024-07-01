@@ -65,3 +65,6 @@ if status is-interactive
         docker completion fish | source
     end
 end
+
+# opam configuration
+source /Users/zasda/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
