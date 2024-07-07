@@ -27,6 +27,8 @@ mkdir -p "${HOME}/.ssh"
 
 # Symlink config files
 ln -fns "${PWD}/alacritty/alacritty.toml" "${HOME}/.config/alacritty/alacritty.toml"
+ln -fns "${PWD}/alacritty/vscode-dark.toml" "${HOME}/.config/alacritty/vscode-dark.toml"
+ln -fns "${PWD}/alacritty/vscode-light.toml" "${HOME}/.config/alacritty/vscode-light.toml"
 ln -fns "${PWD}/fish/config.fish" "${HOME}/.config/fish/config.fish"
 ln -fns "${PWD}/fish/fish_plugins" "${HOME}/.config/fish/fish_plugins"
 ln -fns "${PWD}/git/config" "${HOME}/.config/git/config"
