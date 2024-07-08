@@ -1,6 +1,6 @@
 import = [
   "~/.config/alacritty/vscode-dark.toml",
-  "~/.config/alacritty/vscode-light.toml",
+  # "~/.config/alacritty/vscode-light.toml",
 ]
 
 shell = "/opt/homebrew/bin/fish"
