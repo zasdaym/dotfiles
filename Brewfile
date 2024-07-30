@@ -42,7 +42,7 @@ brew "opam"
 brew "oven-sh/bun/bun"
 brew "pipx"
 brew "ruby"
-brew "rustup-init"
+brew "rustup"
 
 # Container
 brew "argocd"
