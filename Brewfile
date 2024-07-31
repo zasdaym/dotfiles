@@ -58,6 +58,7 @@ brew "carvel-dev/carvel/kapp"
 brew "carvel-dev/carvel/ytt"
 
 # HashiCorp
+brew "opentofu"
 brew "hashicorp/tap/nomad"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
