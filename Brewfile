@@ -36,6 +36,7 @@ brew "jq"
 brew "yq"
 
 # Programming
+brew "crystal"
 brew "elixir"
 brew "fnm"
 brew "go"
