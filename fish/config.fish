@@ -34,6 +34,10 @@ function curl_time
     curl -o /dev/null -s -w '%{time_total} s\n' $argv
 end
 
+function curl_time_detail
+    curl -o /dev/null -s -w 'TCP connect: %{time_connect} s\nDNS lookup: %{time_namelookup} s\nTotal: %{time_total} s\n' $argv
+end
+
 if test -e "/Applications/Tailscale.app/Contents/MacOS/Tailscale"
     function tailscale
         /Applications/Tailscale.app/Contents/MacOS/Tailscale $argv
