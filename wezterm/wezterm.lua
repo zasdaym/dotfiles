@@ -21,7 +21,7 @@ return {
   font = wezterm.font_with_fallback({"Berkeley Mono", "Menlo"}),
   font_size = 14,
   front_end = "WebGpu",
-  hide_tab_bar_if_only_one_tab = true,
+  hide_tab_bar_if_only_one_tab = false,
   keys = {
     {
       mods = 'CMD',
@@ -35,8 +35,15 @@ return {
     },
   },
   native_macos_fullscreen_mode = true,
+  show_close_tab_button_in_tabs = false,
   show_new_tab_button_in_tab_bar = false,
+  show_tab_index_in_tab_bar = true,
   tab_max_width = 100,
-  use_fancy_tab_bar = false,
+  use_fancy_tab_bar = true,
   window_background_opacity = 0.999,
+  window_decorations = "INTEGRATED_BUTTONS|RESIZE",
+  window_frame = {
+    font = wezterm.font_with_fallback({"Berkeley Mono", "Menlo"}),
+    font_size = 14,
+  },
 }
