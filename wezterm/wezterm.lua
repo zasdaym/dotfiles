@@ -20,6 +20,7 @@ return {
   },
   font = wezterm.font_with_fallback({"Berkeley Mono", "Menlo"}),
   font_size = 14,
+  freetype_load_flags = "NO_HINTING",
   front_end = "OpenGL",
   hide_tab_bar_if_only_one_tab = false,
   keys = {
