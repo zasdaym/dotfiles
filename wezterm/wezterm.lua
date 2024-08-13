@@ -20,7 +20,7 @@ return {
   },
   font = wezterm.font_with_fallback({"Berkeley Mono", "Menlo"}),
   font_size = 14,
-  front_end = "WebGpu",
+  front_end = "OpenGL",
   hide_tab_bar_if_only_one_tab = false,
   keys = {
     {
@@ -35,7 +35,7 @@ return {
     },
   },
   native_macos_fullscreen_mode = true,
-  show_close_tab_button_in_tabs = false,
+  -- show_close_tab_button_in_tabs = false,
   show_new_tab_button_in_tab_bar = false,
   show_tab_index_in_tab_bar = true,
   tab_max_width = 100,
