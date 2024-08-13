@@ -18,6 +18,7 @@ return {
       }
     },
   },
+  default_prog = { "/opt/homebrew/bin/fish" },
   font = wezterm.font_with_fallback({"Berkeley Mono", "Menlo"}),
   font_size = 14,
   freetype_load_flags = "NO_HINTING",
