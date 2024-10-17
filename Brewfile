@@ -1,4 +1,5 @@
 # Basic
+brew "ast-grep"
 brew "bat"
 brew "bore-cli"
 brew "btop"
@@ -12,6 +13,7 @@ brew "git-lfs"
 brew "gnupg"
 brew "grpcurl"
 brew "just"
+brew "lazygit"
 brew "neovim"
 brew "oha"
 brew "ripgrep"
