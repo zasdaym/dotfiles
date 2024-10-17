@@ -36,11 +36,13 @@ brew "jq"
 brew "yq"
 
 # Programming
+brew "composer"
 brew "crystal"
 brew "elixir"
 brew "fnm"
 brew "go"
 brew "oven-sh/bun/bun"
+brew "php"
 brew "pipx"
 brew "ruby"
 brew "rustup"
