@@ -149,8 +149,6 @@ vim.filetype.add({
 
 -- Keymap
 vim.g.mapleader = ","
-vim.keymap.set("i", "jj", "<ESC>")
-vim.keymap.set("i", "jk", "<ESC>")
 
 local telescope_builtin = require("telescope.builtin")
 vim.keymap.set("n", "<Leader>p", telescope_builtin.git_files)
