@@ -48,6 +48,7 @@ brew "php"
 brew "pipx"
 brew "ruby"
 brew "rustup"
+brew "uv"
 
 # Container
 brew "argocd"
