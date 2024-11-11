@@ -76,12 +76,10 @@ brew "exercism"
 brew "go-task"
 
 # Cask
-cask "alacritty"
 cask "betterdisplay"
 cask "brave-browser"
 cask "orbstack"
 cask "raycast"
 cask "slack"
 cask "visual-studio-code"
-cask "wezterm"
 cask "wireshark"
