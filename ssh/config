@@ -8,3 +8,4 @@ Host *
 	UserKnownHostsFile /dev/null
 	ServerAliveInterval 300
 	ServerAliveCountMax 2
+    SetEnv TERM=xterm-256color
