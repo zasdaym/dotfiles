@@ -10,7 +10,7 @@
 	autoSetupRemote = true
 [init]
 	defaultBranch = main
-[includeIf "gitdir:~/Codes/gcore/"]
+[includeIf "gitdir:~/Developer/gcore/"]
 	path = gcore.inc
 [filter "lfs"]
 	clean = git-lfs clean -- %f
