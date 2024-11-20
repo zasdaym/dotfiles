@@ -1,6 +1,6 @@
 command = /opt/homebrew/bin/fish
 
-font-family = Berkeley Mono
+font-family = BerkeleyMono Nerd Font
 font-size = 14
 
 theme = Dark+
