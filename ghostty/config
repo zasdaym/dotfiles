@@ -3,6 +3,8 @@ command = /opt/homebrew/bin/fish
 font-family = Berkeley Mono
 font-size = 14
 
+keybind = global:super+j=toggle_quick_terminal
+
 theme = Dark+
 
 window-padding-x = 5
