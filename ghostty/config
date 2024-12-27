@@ -1,6 +1,6 @@
 command = /opt/homebrew/bin/fish
 
-font-family = Berkeley Mono
+font-family = TX-02
 font-size = 14
 
 macos-titlebar-proxy-icon = hidden

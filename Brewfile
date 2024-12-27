@@ -24,7 +24,6 @@ brew "tcptraceroute"
 brew "tree"
 brew "watch"
 brew "xh"
-brew "zellij"
 brew "zoxide"
 
 # Version control
@@ -78,6 +77,7 @@ brew "go-task"
 # Cask
 cask "betterdisplay"
 cask "brave-browser"
+cask "ghostty"
 cask "orbstack"
 cask "raycast"
 cask "slack"
