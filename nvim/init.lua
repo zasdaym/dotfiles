@@ -20,6 +20,11 @@ require('lazy').setup({
     priority = 1000,
   },
   {
+    "ellisonleao/gruvbox.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
     "nvim-lualine/lualine.nvim",
     config = function()
       require("lualine").setup({
@@ -109,7 +114,7 @@ require('lazy').setup({
 
 -- Color
 vim.opt.termguicolors = true
-vim.cmd [[colorscheme vscode]]
+vim.cmd [[colorscheme gruvbox]]
 
 -- Case
 vim.opt.ignorecase = true

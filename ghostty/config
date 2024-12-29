@@ -5,6 +5,6 @@ font-size = 14
 
 macos-titlebar-proxy-icon = hidden
 
-theme = Dark+
+theme = dark:GruvboxDark,light:GruvboxLight
 
 window-padding-x = 5
