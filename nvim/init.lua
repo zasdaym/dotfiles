@@ -15,11 +15,6 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugins
 require('lazy').setup({
   {
-    "Mofiqul/vscode.nvim",
-    lazy = false,
-    priority = 1000,
-  },
-  {
     "ellisonleao/gruvbox.nvim",
     lazy = false,
     priority = 1000,
@@ -118,6 +113,7 @@ require('lazy').setup({
 })
 
 -- Color
+vim.opt.background = "light"
 vim.opt.termguicolors = true
 vim.cmd [[colorscheme gruvbox]]
 
