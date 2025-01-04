@@ -44,12 +44,6 @@ if test -e "/Applications/Tailscale.app/Contents/MacOS/Tailscale"
     end
 end
 
-if test -n "$KITTY_PID"
-    function ssh
-        kitty +kitten ssh $argv
-    end
-end
-
 fish_add_path /opt/homebrew/lib/ruby/gems/$(ruby --version | awk '{print $2}')/bin
 
 if status is-interactive
