@@ -1,11 +1,13 @@
 command = /opt/homebrew/bin/fish
 
+cursor-style = underline
+
 font-family = TX-02
 font-feature = ss01
 font-size = 14
 
 macos-titlebar-proxy-icon = hidden
 
-theme = dark:GruvboxDarkHard,light:GruvboxLightHard
+theme = dark:gruvbox-dark-hard,light:gruvbox-light-hard
 
 window-padding-x = 5
