@@ -15,21 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugins
 require('lazy').setup({
   {
-    "ellisonleao/gruvbox.nvim",
+    "EdenEast/nightfox.nvim",
     lazy = false,
     priority = 1000,
-    config = function()
-      require("gruvbox").setup({
-        contrast = "hard",
-        italic = {
-          strings = false,
-          emphasis = false,
-          comments = false,
-          operators = false,
-          folds = false,
-        },
-      })
-    end,
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -121,7 +109,7 @@ require('lazy').setup({
 
 -- Color
 vim.opt.termguicolors = true
-vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme dayfox]]
 
 -- Case
 vim.opt.ignorecase = true

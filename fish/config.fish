@@ -65,3 +65,6 @@ if status is-interactive
         docker completion fish | source
     end
 end
+
+# dayfox
+set -g fish_color_autosuggestion 837a72

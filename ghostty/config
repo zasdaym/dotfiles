@@ -8,6 +8,6 @@ font-size = 14
 
 macos-titlebar-proxy-icon = hidden
 
-theme = dark:gruvbox-dark-hard,light:gruvbox-light-hard
+theme = dark:nightfox,light:dayfox
 
 window-padding-x = 5
