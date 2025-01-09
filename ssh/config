@@ -2,10 +2,10 @@ Include ~/.ssh/config.d/*
 Include ~/.orbstack/ssh/config
 
 Host *
-	ForwardAgent yes
-	LogLevel ERROR
-	StrictHostKeyChecking no
-	UserKnownHostsFile /dev/null
-	ServerAliveInterval 300
-	ServerAliveCountMax 2
+    ForwardAgent yes
+    LogLevel ERROR
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    ServerAliveInterval 300
+    ServerAliveCountMax 2
     SetEnv TERM=xterm-256color

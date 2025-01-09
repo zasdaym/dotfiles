@@ -15,6 +15,11 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugins
 require('lazy').setup({
   {
+    "projekt0n/github-nvim-theme",
+    lazy = false,
+    priority = 1000,
+  },
+  {
     "EdenEast/nightfox.nvim",
     lazy = false,
     priority = 1000,
