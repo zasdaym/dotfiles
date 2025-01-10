@@ -110,6 +110,14 @@ require('lazy').setup({
       })
     end,
   },
+  {
+    "saghen/blink.cmp",
+    dependencies = "rafamadriz/friendly-snippets",
+    version = "*",
+    opts = {
+      keymap = { preset = "super-tab" },
+    },
+  },
 })
 
 -- Color
@@ -142,7 +150,7 @@ vim.opt.tabstop = 4
 
 vim.api.nvim_create_autocmd('Filetype', {
   group = vim.api.nvim_create_augroup('setIndent', {}),
-  pattern = { 'javascript', 'puppet', 'typescript', 'hcl' },
+  pattern = { 'javascript', 'lua', 'puppet', 'typescript', 'hcl' },
   command = 'setlocal tabstop=2 shiftwidth=2 expandtab'
 })
 
