@@ -10,4 +10,5 @@ macos-titlebar-proxy-icon = hidden
 
 theme = dark:terafox,light:dayfox
 
+window-colorspace = display-p3
 window-padding-x = 5
