@@ -15,14 +15,12 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugins
 require('lazy').setup({
   {
-    "oxfist/night-owl.nvim",
-    lazy = false,
-    priority = 1000,
-  },
-  {
     "EdenEast/nightfox.nvim",
     lazy = false,
     priority = 1000,
+    config = function()
+      vim.cmd("colorscheme dayfox")
+    end,
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -120,8 +118,6 @@ require('lazy').setup({
   },
 })
 
--- Color
-vim.cmd.colorscheme("dayfox")
 
 -- Case
 vim.opt.ignorecase = true
