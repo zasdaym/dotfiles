@@ -140,15 +140,6 @@ require('lazy').setup({
       "MunifTanjim/nui.nvim",
     },
   },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    ---@module "ibl"
-    ---@type ibl.config
-    opts = {
-      scope = { enabled = false },
-    },
-  },
 })
 
 -- Case
