@@ -18,25 +18,32 @@ require('lazy').setup({
     "EdenEast/nightfox.nvim",
     lazy = false,
     priority = 1000,
-    config = function()
-      vim.cmd("colorscheme dayfox")
-    end,
+  },
+  {
+    "f-person/auto-dark-mode.nvim",
+    opts = {
+      update_interval = 1000,
+      set_dark_mode = function()
+        vim.api.nvim_set_option_value("background", "dark", {})
+        vim.cmd("colorscheme nightfox")
+      end,
+      set_light_mode = function()
+        vim.api.nvim_set_option_value("background", "light", {})
+        vim.cmd("colorscheme dayfox")
+      end,
+    },
   },
   {
     "nvim-lualine/lualine.nvim",
-    config = function()
-      require("lualine").setup({
-        options = {
-          icons_enabled = false,
-        }
-      })
-    end,
+    opts = {
+      options = {
+        icons_enabled = false,
+      }
+    },
   },
   {
     "numToStr/Comment.nvim",
-    config = function()
-      require("Comment").setup()
-    end,
+    opts = {},
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -124,15 +131,7 @@ require('lazy').setup({
     lazy = false,
     version = false,
     opts = {
-      provider = "deepseek",
-      vendors = {
-        deepseek = {
-          __inherited_from = "openai",
-          api_key_name = "DEEPSEEK_API_KEY",
-          endpoint = "https://api.deepseek.com",
-          model = "deepseek-coder",
-        },
-      },
+      provider = "gemini",
     },
     build = "make",
     dependencies = {
@@ -151,7 +150,6 @@ require('lazy').setup({
     },
   },
 })
-
 
 -- Case
 vim.opt.ignorecase = true
