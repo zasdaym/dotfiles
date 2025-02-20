@@ -1,14 +1,10 @@
 command = /opt/homebrew/bin/fish
 
-cursor-style = underline
-
 font-family = TX-02
 font-feature = ss01
 font-size = 14
 
 macos-titlebar-proxy-icon = hidden
-
-shell-integration-features = no-cursor
 
 theme = dark:nightfox,light:dayfox
 
