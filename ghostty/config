@@ -8,6 +8,8 @@ font-size = 14
 
 macos-titlebar-proxy-icon = hidden
 
+shell-integration-features = no-cursor
+
 theme = dark:nightfox,light:dayfox
 
 window-colorspace = display-p3
