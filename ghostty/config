@@ -1,12 +1,11 @@
 command = /opt/homebrew/bin/fish
 
 font-family = TX-02
-font-feature = ss01
+font-feature = -calt,ss01
 font-size = 14
 
 macos-titlebar-proxy-icon = hidden
 
 theme = dark:nightfox,light:dayfox
 
-window-colorspace = display-p3
 window-padding-x = 5
