@@ -15,11 +15,18 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugins
 require('lazy').setup({
   {
+    "navarasu/onedark.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd("colorscheme onedark")
+    end,
+  },
+  {
     "EdenEast/nightfox.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd("colorscheme dayfox")
     end,
   },
   {
