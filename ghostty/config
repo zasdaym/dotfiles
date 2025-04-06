@@ -5,6 +5,7 @@ font-size = 14
 
 macos-titlebar-proxy-icon = hidden
 
-theme = dark:AtomOneDark,light:AtomOneLight
+theme = dark:nightfox,light:dayfox
 
-window-padding-x = 5
+window-colorspace = display-p3
+window-padding-x = 8

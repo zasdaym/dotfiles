@@ -19,7 +19,6 @@ require('lazy').setup({
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd("colorscheme onedark")
     end,
   },
   {
@@ -27,6 +26,7 @@ require('lazy').setup({
     lazy = false,
     priority = 1000,
     config = function()
+      vim.cmd("colorscheme dayfox")
     end,
   },
   {
