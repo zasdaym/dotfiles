@@ -60,6 +60,7 @@ if status is-interactive
     starship init fish | source
     fnm env --use-on-cd | source
     zoxide init fish | source
+    atuin init fish | source
 
     if type -q docker
         docker completion fish | source

@@ -16,6 +16,7 @@ done
 
 # Create required directories
 mkdir -p "${HOME}/.aws"
+mkdir -p "${HOME}/.config/atuin"
 mkdir -p "${HOME}/.config/fish"
 mkdir -p "${HOME}/.config/ghostty"
 mkdir -p "${HOME}/.config/git"
@@ -24,6 +25,7 @@ mkdir -p "${HOME}/.kube"
 mkdir -p "${HOME}/.ssh"
 
 # Symlink config files
+ln -fns "${PWD}/atuin/config.toml" "${HOME}/.config/atuin/config.toml"
 ln -fns "${PWD}/fish/config.fish" "${HOME}/.config/fish/config.fish"
 ln -fns "${PWD}/fish/fish_plugins" "${HOME}/.config/fish/fish_plugins"
 ln -fns "${PWD}/ghostty/config" "${HOME}/.config/ghostty/config"

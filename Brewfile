@@ -1,5 +1,6 @@
 # Basic
 brew "ast-grep"
+brew "atuin"
 brew "bat"
 brew "bore-cli"
 brew "btop"
