@@ -19,14 +19,7 @@ require('lazy').setup({
     lazy = false,
     priority = 1000,
     config = function()
-    end,
-  },
-  {
-    "EdenEast/nightfox.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.cmd("colorscheme dayfox")
+      vim.cmd("colorscheme onedark")
     end,
   },
   {
