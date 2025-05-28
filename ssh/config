@@ -1,3 +1,4 @@
+Include ~/.colima/ssh_config
 Include ~/.ssh/config.d/*
 Include ~/.orbstack/ssh/config
 
