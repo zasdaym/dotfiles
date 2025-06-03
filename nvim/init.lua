@@ -19,7 +19,7 @@ require('lazy').setup({
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd("colorscheme github_light")
+      vim.cmd("colorscheme github_light_default")
     end,
   },
   {
