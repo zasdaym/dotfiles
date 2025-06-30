@@ -65,4 +65,6 @@ if status is-interactive
     if type -q docker
         docker completion fish | source
     end
+
+    source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 end
