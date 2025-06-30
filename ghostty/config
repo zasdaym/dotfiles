@@ -9,4 +9,3 @@ theme = dark:GitHub-Dark-Default,light:GitHub-Light-Default
 
 window-colorspace = display-p3
 window-padding-x = 8
-window-save-state = always
