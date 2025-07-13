@@ -34,7 +34,7 @@ ln -fns "${PWD}/nvim/init.lua" "${HOME}/.config/nvim/init.lua"
 ln -fns "${PWD}/ssh/config" "${HOME}/.ssh/config"
 ln -fns "${PWD}/starship/starship.toml" "${HOME}/.config/starship.toml"
 
-# Dummy file to hide additional prompt
+# Dummy file for CLOUDSDK_CONFIG to hide gcloud information on prompt.
 touch "${HOME}/.null"
 sudo chmod 600 "${HOME}/.null"
 
