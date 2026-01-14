@@ -8,7 +8,7 @@ if status is-interactive
     set -gx TF_PLUGIN_CACHE_DIR "$HOME/.terraform.d/plugin-cache"
 
     if type -q mise
-        mise completion fish | source
+        mise activate fish | source
     end
 
     if type -q docker
