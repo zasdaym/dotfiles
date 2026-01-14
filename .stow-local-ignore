@@ -1,2 +1,6 @@
-.*
-!.config
+\.git
+\.gitignore
+.+\.md
+.+\.sh
+fonts
+Brewfile.*
