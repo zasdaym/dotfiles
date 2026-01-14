@@ -1,11 +1,5 @@
-command = /run/current-system/sw/bin/fish
-
 font-family = TX-02
 font-size = 14
-
 macos-titlebar-proxy-icon = hidden
-
 theme = dark:GitHub-Dark-Default,light:GitHub-Light-Default
-
-window-colorspace = display-p3
 window-padding-x = 8
