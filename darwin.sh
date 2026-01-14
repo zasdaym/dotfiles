@@ -27,4 +27,4 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # Remove Spotlight in menu bar
 
 # Copy fonts
-cp fonts/*.ttf ~/Library/Fonts/
+cp fonts/*.otf ~/Library/Fonts/

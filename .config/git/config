@@ -1,0 +1,19 @@
+[gpg]
+        format = "ssh"
+
+[init]
+        defaultBranch = "main"
+
+[pull]
+        rebase = true
+
+[push]
+        autoSetupRemote = true
+
+[user]
+        name = "Zasda Mikail"
+        email = "zasdaym@gmail.com"
+        signingKey = "~/.ssh/id_ed25519.pub"
+
+[includeIf "gitdir:~/Developer/gcore/"]
+        path = "~/.config/git/gcore.inc"

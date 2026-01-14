@@ -1,0 +1,4 @@
+theme = "flexoki_light"
+
+[editor]
+default-yank-register = "+"
