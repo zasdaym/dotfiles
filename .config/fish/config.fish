@@ -22,4 +22,11 @@ if status is-interactive
     if type -q zoxide
         zoxide init fish | source
     end
+
+    abbr --add gcs "git commit -S -m"
+    abbr --add ggpush "git push origin (git branch --show-current)"
+    abbr --add ggpull "git pull origin (git branch --show-current)"
+    abbr --add grt "cd (git rev-parse --show-toplevel || echo '.')"
+    abbr --add glog "git log --oneline --decorate --graph $argv"
+
 end
