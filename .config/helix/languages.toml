@@ -1,0 +1,4 @@
+[[language]]
+name = "puppet"
+scope = "source.ruby"
+file-types = ["pp"]
