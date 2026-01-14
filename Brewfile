@@ -1,9 +1,10 @@
-# Cask
+brew "fish"
+brew "stow"
 cask "betterdisplay"
+cask "brave-browser"
 cask "ghostty"
-cask "helium-browser"
 cask "orbstack"
 cask "raycast"
 cask "slack"
 cask "visual-studio-code"
-cask "wireshark"
+cask "wireshark-app"
