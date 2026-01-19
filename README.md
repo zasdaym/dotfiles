@@ -1,1 +1,3 @@
 # dotfiles
+
+ Bye, Nix.
