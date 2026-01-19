@@ -1,5 +1,6 @@
 [tools]
 "github:git-town/git-town" = "latest"
+"github:lance0/ttl" = "latest"
 "github:psviderski/uncloud" = "latest"
 "github:usagi-flow/evil-helix" = "latest"
 buf = "latest"
