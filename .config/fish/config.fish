@@ -28,5 +28,6 @@ if status is-interactive
     abbr --add ggpull "git pull origin (git branch --show-current)"
     abbr --add grt "cd (git rev-parse --show-toplevel || echo '.')"
     abbr --add glog "git log --oneline --decorate --graph $argv"
+    abbr --add gmsg "git log -1 --pretty=%B"
 
 end
