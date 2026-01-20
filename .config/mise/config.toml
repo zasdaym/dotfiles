@@ -5,6 +5,7 @@
 "github:usagi-flow/evil-helix" = "latest"
 buf = "latest"
 bun = "latest"
+difftastic = "latest"
 fd = "latest"
 fzf = "latest"
 gh = "latest"

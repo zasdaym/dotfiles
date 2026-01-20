@@ -3,6 +3,7 @@ if status is-interactive
     set fish_greeting ""
 
     set -gx CLOUDSDK_CONFIG "$HOME/.null"
+    set -gx GIT_EXTERNAL_DIFF difft
     set -gx EDITOR hx
     set -gx FZF_DEFAULT_OPTS --no-color
     set -gx TF_PLUGIN_CACHE_DIR "$HOME/.terraform.d/plugin-cache"
