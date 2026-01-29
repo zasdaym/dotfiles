@@ -10,6 +10,7 @@ if status is-interactive
 
     if type -q mise
         mise activate fish | source
+        mise completion fish | source
     end
 
     if type -q docker
@@ -30,5 +31,4 @@ if status is-interactive
     abbr --add grt "cd (git rev-parse --show-toplevel || echo '.')"
     abbr --add glog "git log --oneline --decorate --graph $argv"
     abbr --add gmsg "git log -1 --pretty=%B"
-
 end
