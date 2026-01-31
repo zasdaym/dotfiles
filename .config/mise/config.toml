@@ -45,4 +45,6 @@ url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d
 usage = "latest"
 amp = "latest"
 "github:sarub0b0/kubetui" = "latest"
+"github:@github/copilot-cli" = "latest"
+"github:AlexanderGrooff/mermaid-ascii" = "latest"
 
