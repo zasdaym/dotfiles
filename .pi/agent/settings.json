@@ -1,0 +1,9 @@
+{
+  "lastChangelogVersion": "0.50.1",
+  "theme": "light",
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-opus-4-5",
+  "defaultThinkingLevel": "off",
+  "packages": [],
+  "quietStartup": true
+}
