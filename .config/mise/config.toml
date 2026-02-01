@@ -47,4 +47,5 @@ amp = "latest"
 "github:sarub0b0/kubetui" = "latest"
 "github:@github/copilot-cli" = "latest"
 "github:AlexanderGrooff/mermaid-ascii" = "latest"
+"github:jsdelivr/globalping-cli" = "latest"
 
