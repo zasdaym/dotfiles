@@ -48,4 +48,5 @@ amp = "latest"
 "github:@github/copilot-cli" = "latest"
 "github:AlexanderGrooff/mermaid-ascii" = "latest"
 "github:jsdelivr/globalping-cli" = "latest"
+codex = "latest"
 
