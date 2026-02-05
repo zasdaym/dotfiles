@@ -1,6 +1,5 @@
 brew "fish"
 brew "stow"
-cask "betterdisplay"
 cask "brave-browser"
 cask "ghostty"
 cask "handy"
