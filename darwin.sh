@@ -40,6 +40,18 @@ configure_menu_bar() {
 	defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 }
 
+configure_finder() {
+	log "Configuring Finder..."
+	defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+	defaults write com.apple.finder AppleShowAllFiles -bool true
+	defaults write com.apple.finder ShowPathbar -bool true
+	defaults write com.apple.finder ShowStatusBar -bool true
+	defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+	defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+	defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+	killall Finder || true
+}
+
 install_fonts() {
 	local script_dir
 	script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -60,6 +72,7 @@ main() {
 	configure_trackpad
 	configure_keyboard
 	configure_menu_bar
+	configure_finder
 	install_fonts
 
 	log "macOS configuration complete!"

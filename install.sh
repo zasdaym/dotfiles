@@ -74,7 +74,7 @@ symlink_dotfiles() {
 	fi
 
 	log "Symlinking dotfiles with stow..."
-	( cd "${PWD}" && stow --no-folding --target $HOME .)
+	( cd "${PWD}" && stow --no-folding --target "${HOME}" .)
 }
 
 main() {
