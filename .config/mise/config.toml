@@ -4,7 +4,6 @@
 package_manager = "bun"
 
 [tools]
-amp = "latest"
 buf = "latest"
 bun = "latest"
 claude = { version = "latest", bin = "claude", platforms = """
@@ -24,6 +23,7 @@ url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d
 bin = "claude.exe"
 url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/{version}/win32-x64/claude.exe"
 """, version_list_url = "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/latest" }
+codex = "latest"
 difftastic = "latest"
 fd = "latest"
 fzf = "latest"
@@ -45,4 +45,3 @@ zoxide = "latest"
 "github:psviderski/uncloud" = "latest"
 "github:sarub0b0/kubetui" = "latest"
 "github:usagi-flow/evil-helix" = "latest"
-"npm:@mariozechner/pi-coding-agent" = "latest"
