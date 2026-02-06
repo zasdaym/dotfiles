@@ -13,6 +13,11 @@ if status is-interactive
         mise completion fish | source
     end
 
+    if type -q fzf
+        # fzf >= 0.48 provides fish integration via --fish.
+        fzf --fish | source
+    end
+
     if type -q docker
         docker completion fish | source
     end
