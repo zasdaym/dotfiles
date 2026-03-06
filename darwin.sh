@@ -5,64 +5,75 @@ set -o errtrace
 set -o nounset
 set -o pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+readonly SCRIPT_DIR
+readonly FONTS_DIR="${SCRIPT_DIR}/fonts"
+
 log() {
-	echo "[INFO] $1"
+	printf '[INFO] %s\n' "$1"
+}
+
+set_default() {
+	defaults write "$@"
+}
+
+restart_app() {
+	killall "$1" >/dev/null 2>&1 || true
 }
 
 configure_dock() {
 	log "Configuring Dock..."
-	defaults write com.apple.dock autohide -bool true
-	defaults write com.apple.dock launchanim -bool false
-	defaults write com.apple.dock mineffect -string "scale"
-	defaults write com.apple.dock minimize-to-application -bool true
-	defaults write com.apple.dock mru-spaces -bool false
-	defaults write com.apple.dock persistent-apps -array
-	defaults write com.apple.dock show-recents -bool false
-	defaults write com.apple.dock tilesize -integer 32
-	killall Dock || true
+	set_default com.apple.dock autohide -bool true
+	set_default com.apple.dock launchanim -bool false
+	set_default com.apple.dock mineffect -string "scale"
+	set_default com.apple.dock minimize-to-application -bool true
+	set_default com.apple.dock mru-spaces -bool false
+	set_default com.apple.dock persistent-apps -array
+	set_default com.apple.dock show-recents -bool false
+	set_default com.apple.dock tilesize -integer 32
+	restart_app Dock
 }
 
 configure_trackpad() {
 	log "Configuring Trackpad..."
-	defaults write com.apple.AppleBluetoothMultitouchTrackpad Clicking -bool true
-	defaults write com.apple.AppleBluetoothMultitouchTrackpad TrackpadRightClick -bool true
-	defaults write com.apple.AppleBluetoothMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+	set_default com.apple.AppleBluetoothMultitouchTrackpad Clicking -bool true
+	set_default com.apple.AppleBluetoothMultitouchTrackpad TrackpadRightClick -bool true
+	set_default com.apple.AppleBluetoothMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 }
 
 configure_keyboard() {
 	log "Configuring Keyboard..."
-	defaults write NSGlobalDomain KeyRepeat -int 2
-	defaults write NSGlobalDomain InitialKeyRepeat -int 15
+	set_default NSGlobalDomain KeyRepeat -int 2
+	set_default NSGlobalDomain InitialKeyRepeat -int 15
 }
 
 configure_menu_bar() {
 	log "Configuring Menu Bar..."
-	defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+	set_default com.apple.menuextra.battery ShowPercent -string "YES"
 }
 
 configure_finder() {
 	log "Configuring Finder..."
-	defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-	defaults write com.apple.finder AppleShowAllFiles -bool true
-	defaults write com.apple.finder ShowPathbar -bool true
-	defaults write com.apple.finder ShowStatusBar -bool true
-	defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-	defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-	defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-	killall Finder || true
+	set_default NSGlobalDomain AppleShowAllExtensions -bool true
+	set_default com.apple.finder AppleShowAllFiles -bool true
+	set_default com.apple.finder ShowPathbar -bool true
+	set_default com.apple.finder ShowStatusBar -bool true
+	set_default com.apple.finder FXPreferredViewStyle -string "Nlsv"
+	set_default com.apple.finder FXDefaultSearchScope -string "SCcf"
+	set_default com.apple.finder FXEnableExtensionChangeWarning -bool false
+	restart_app Finder
 }
 
 install_fonts() {
-	local script_dir
-	script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-	local fonts_dir="${script_dir}/fonts"
+	local font_files=("${FONTS_DIR}"/*.otf)
 
-	if [[ -d "${fonts_dir}" ]] && compgen -G "${fonts_dir}/*.otf" >/dev/null; then
-		log "Installing fonts..."
-		cp "${fonts_dir}"/*.otf ~/Library/Fonts/
-	else
+	if [[ ! -e "${font_files[0]}" ]]; then
 		log "No fonts to install"
+		return
 	fi
+
+	log "Installing fonts..."
+	cp "${font_files[@]}" "${HOME}/Library/Fonts/"
 }
 
 main() {
