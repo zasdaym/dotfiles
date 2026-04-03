@@ -4,5 +4,6 @@
   "defaultThinkingLevel": "high",
   "quietStartup": true,
   "lastChangelogVersion": "0.64.0",
-  "theme": "light"
+  "theme": "light",
+  "hideThinkingBlock": true
 }
