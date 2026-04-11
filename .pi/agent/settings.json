@@ -3,7 +3,12 @@
   "defaultModel": "gpt-5.4",
   "defaultThinkingLevel": "medium",
   "quietStartup": true,
-  "lastChangelogVersion": "0.65.2",
+  "lastChangelogVersion": "0.66.1",
   "theme": "light",
-  "hideThinkingBlock": true
+  "hideThinkingBlock": true,
+  "packages": [
+    "npm:pi-web-access",
+    "npm:pi-mcp-adapter",
+    "npm:pi-subagents"
+  ]
 }
