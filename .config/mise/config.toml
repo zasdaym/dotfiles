@@ -6,7 +6,7 @@ package_manager = "bun"
 [tools]
 buf = "latest"
 bun = "latest"
-codex = "v0.112.0"
+codex = "latest"
 difftastic = "latest"
 fd = "latest"
 fzf = "latest"
