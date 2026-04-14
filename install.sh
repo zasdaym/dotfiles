@@ -24,7 +24,6 @@ find_command() {
 }
 
 check_dependencies() {
-	local program
 	for program in curl git openssl; do
 		if [[ -z "$(find_command "${program}")" ]]; then
 			echo "Please install ${program} first" >&2
@@ -47,8 +46,6 @@ install_homebrew() {
 
 	echo "Installing Homebrew"
 	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-	local brew_bin
 
 	for brew_bin in /opt/homebrew/bin/brew /home/linuxbrew/.linuxbrew/bin/brew; do
 		if [[ -x "${brew_bin}" ]]; then
