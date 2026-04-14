@@ -31,3 +31,6 @@ fi
 if command -v starship &>/dev/null; then
 	eval "$(starship init zsh)"
 fi
+
+# CF CLI completions
+[[ -f "/Users/zasda/.config/cf/completions/_cf.zsh" ]] && source "/Users/zasda/.config/cf/completions/_cf.zsh"
