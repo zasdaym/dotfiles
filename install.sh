@@ -39,13 +39,23 @@ setup_null_file() {
 	echo "Created secure ~/.null file"
 }
 
-install_zerobrew() {
-	if [[ -z "$(find_command zb)" ]]; then
-		echo "Installing Zerobrew"
-		curl -fsSL https://zerobrew.rs/install | bash -s -- --no-modify-path
-	else
-		echo "Zerobrew already installed"
+install_homebrew() {
+	if [[ -n "$(find_command brew)" ]]; then
+		echo "Homebrew already installed"
+		return
 	fi
+
+	echo "Installing Homebrew"
+	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+	local brew_bin
+
+	for brew_bin in /opt/homebrew/bin/brew /home/linuxbrew/.linuxbrew/bin/brew; do
+		if [[ -x "${brew_bin}" ]]; then
+			eval "$(${brew_bin} shellenv)"
+			return
+		fi
+	done
 }
 
 install_mise() {
@@ -59,7 +69,12 @@ install_mise() {
 }
 
 install_stow() {
-    $HOME/.bin/zb install stow
+	if [[ -z "$(find_command brew)" ]]; then
+		echo "Please make sure Homebrew is installed"
+		return
+	fi
+
+	brew install stow
 }
 
 symlink_dotfiles() {
@@ -93,15 +108,14 @@ main() {
 	check_dependencies
 	setup_null_file
 	install_mise
-	install_zerobrew
+	install_homebrew
 	install_stow
 	symlink_dotfiles
 	run_darwin_setup
 
 	echo "Bootstrap completed, run these commands to finish:"
-	echo "export PATH=$PATH:$HOME/.local/bin"
-	echo "zb bundle"
 	echo "mise install"
+	echo "brew bundle"
 }
 
 main "$@"

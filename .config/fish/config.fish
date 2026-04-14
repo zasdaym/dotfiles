@@ -2,6 +2,10 @@ if status is-interactive
     fish_config theme choose None
     set fish_greeting ""
 
+    if test -d /opt/homebrew/bin
+        fish_add_path /opt/homebrew/bin
+    end
+
     set -gx CLOUDSDK_CONFIG "$HOME/.null"
     set -gx GIT_EXTERNAL_DIFF difft
     set -gx EDITOR hx
