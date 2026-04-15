@@ -7,6 +7,7 @@
   "theme": "light",
   "hideThinkingBlock": true,
   "packages": [
-    "npm:pi-web-access"
+    "npm:pi-web-access",
+    "git:github.com/earendil-works/pi-review"
   ]
 }
