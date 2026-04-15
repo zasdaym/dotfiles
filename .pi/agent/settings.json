@@ -1,6 +1,6 @@
 {
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.4-mini",
+  "defaultModel": "gpt-5.4",
   "defaultThinkingLevel": "medium",
   "quietStartup": true,
   "lastChangelogVersion": "9999.0.0",
