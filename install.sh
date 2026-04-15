@@ -23,10 +23,14 @@ find_command() {
 	command -v "$1" || true
 }
 
+print_error() {
+	echo "$*" >&2
+}
+
 check_dependencies() {
 	for program in curl git openssl; do
 		if [[ -z "$(find_command "${program}")" ]]; then
-			echo "Please install ${program} first" >&2
+			print_error "Please install ${program} first"
 			exit 1
 		fi
 	done
@@ -67,8 +71,8 @@ install_mise() {
 
 install_stow() {
 	if [[ -z "$(find_command brew)" ]]; then
-		echo "Please make sure Homebrew is installed"
-		return
+		print_error "Please make sure Homebrew is installed"
+		exit 1
 	fi
 
 	brew install stow
@@ -76,8 +80,8 @@ install_stow() {
 
 symlink_dotfiles() {
 	if [[ -z "$(find_command stow)" ]]; then
-		echo "Please make sure stow is installed"
-		return
+		print_error "Please make sure stow is installed"
+		exit 1
 	fi
 
 	echo "Symlinking dotfiles with stow"
@@ -92,7 +96,7 @@ run_darwin_setup() {
 	local darwin_script="${SCRIPT_DIR}/darwin.sh"
 
 	if [[ ! -x "${darwin_script}" ]]; then
-		echo "Missing or non-executable ${darwin_script}" >&2
+		print_error "Missing or non-executable ${darwin_script}"
 		exit 1
 	fi
 
