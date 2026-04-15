@@ -5,118 +5,71 @@ set -o errtrace
 set -o nounset
 set -o pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-readonly SCRIPT_DIR
+readonly REPO_URL="https://github.com/zasdaym/dotfiles.git"
+readonly SCRIPT_PATH="${BASH_SOURCE[0]}"
+readonly SCRIPT_DIR="$(cd "$(dirname "${SCRIPT_PATH}")" && pwd)"
 
-OS="$(uname -s)"
-readonly OS
-
-is_macos() {
-	[[ "${OS}" == "Darwin" ]]
-}
-
-is_linux() {
-	[[ "${OS}" == "Linux" ]]
+print_error() {
+	echo "$*" >&2
 }
 
 find_command() {
 	command -v "$1" || true
 }
 
-print_error() {
-	echo "$*" >&2
-}
-
 check_dependencies() {
-	for program in curl git openssl; do
+	for program in bash curl git; do
 		if [[ -z "$(find_command "${program}")" ]]; then
 			print_error "Please install ${program} first"
 			exit 1
 		fi
 	done
-	echo "All dependencies are installed"
 }
 
-setup_null_file() {
-	install -m 600 /dev/null "${HOME}/.null"
-	echo "Created secure ~/.null file"
+is_repo_checkout() {
+	[[ -f "${SCRIPT_DIR}/scripts/install-local.sh" ]] && git -C "${SCRIPT_DIR}" rev-parse --show-toplevel >/dev/null 2>&1
 }
 
-install_homebrew() {
-	if [[ -n "$(find_command brew)" ]]; then
-		echo "Homebrew already installed"
+determine_target_dir() {
+	if is_repo_checkout; then
+		printf '%s\n' "${SCRIPT_DIR}"
 		return
 	fi
 
-	echo "Installing Homebrew"
-	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-	for brew_bin in /opt/homebrew/bin/brew /home/linuxbrew/.linuxbrew/bin/brew; do
-		if [[ -x "${brew_bin}" ]]; then
-			eval "$(${brew_bin} shellenv)"
-			return
-		fi
-	done
+	printf '%s\n' "${PWD}/dotfiles"
 }
 
-install_mise() {
-	if [[ -n "$(find_command mise)" ]]; then
-		echo "Mise already installed"
+clone_repo() {
+	local target_dir="$1"
+
+	if [[ "${target_dir}" == "${SCRIPT_DIR}" ]] && is_repo_checkout; then
+		echo "Using existing checkout at ${target_dir}"
 		return
 	fi
 
-	echo "Installing mise"
-	curl -fsSL https://mise.run | sh
-}
-
-install_stow() {
-	if [[ -z "$(find_command brew)" ]]; then
-		print_error "Please make sure Homebrew is installed"
+	if [[ -e "${target_dir}" ]]; then
+		print_error "${target_dir} already exists. Remove it or run the installer from inside that repo."
 		exit 1
 	fi
 
-	brew install stow
+	echo "Cloning dotfiles into ${target_dir}"
+	git clone "${REPO_URL}" "${target_dir}"
 }
 
-symlink_dotfiles() {
-	if [[ -z "$(find_command stow)" ]]; then
-		print_error "Please make sure stow is installed"
-		exit 1
-	fi
+run_local_installer() {
+	local target_dir="$1"
 
-	echo "Symlinking dotfiles with stow"
-	stow --dir "${SCRIPT_DIR}" --no-folding --target "${HOME}" .
-}
-
-run_darwin_setup() {
-	if ! is_macos; then
-		return
-	fi
-
-	local darwin_script="${SCRIPT_DIR}/darwin.sh"
-
-	if [[ ! -x "${darwin_script}" ]]; then
-		print_error "Missing or non-executable ${darwin_script}"
-		exit 1
-	fi
-
-	"${darwin_script}"
+	echo "Running local installer"
+	bash "${target_dir}/scripts/install-local.sh"
 }
 
 main() {
-	echo "Starting dotfiles installation on ${OS}"
+	local target_dir
 
 	check_dependencies
-	setup_null_file
-	install_mise
-	install_homebrew
-	install_stow
-	symlink_dotfiles
-	run_darwin_setup
-
-	echo "Bootstrap completed, run these commands to finish:"
-	echo "mise install"
-	echo "brew bundle"
+	target_dir="$(determine_target_dir)"
+	clone_repo "${target_dir}"
+	run_local_installer "${target_dir}"
 }
 
 main "$@"
