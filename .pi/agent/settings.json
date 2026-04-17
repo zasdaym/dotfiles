@@ -9,7 +9,6 @@
   "packages": [
     "npm:pi-subagents",
     "npm:pi-web-access",
-    "git:github.com/coctostan/pi-superpowers",
     "git:github.com/earendil-works/pi-review"
   ]
 }
