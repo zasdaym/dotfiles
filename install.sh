@@ -18,7 +18,7 @@ find_command() {
 }
 
 check_dependencies() {
-	for program in bash curl git; do
+	for program in bash curl git openssl; do
 		if [[ -z "$(find_command "${program}")" ]]; then
 			print_error "Please install ${program} first"
 			exit 1

@@ -23,6 +23,25 @@ find_command() {
 	command -v "$1" || true
 }
 
+load_brew_shellenv() {
+	local brew_bin
+
+	brew_bin="$(command -v brew 2>/dev/null || true)"
+	if [[ -n "${brew_bin}" && -x "${brew_bin}" ]]; then
+		eval "$("${brew_bin}" shellenv)"
+		return 0
+	fi
+
+	for brew_bin in /opt/homebrew/bin/brew /usr/local/bin/brew /home/linuxbrew/.linuxbrew/bin/brew; do
+		if [[ -x "${brew_bin}" ]]; then
+			eval "$("${brew_bin}" shellenv)"
+			return 0
+		fi
+	done
+
+	return 1
+}
+
 print_error() {
 	echo "$*" >&2
 }
@@ -43,7 +62,7 @@ setup_null_file() {
 }
 
 install_homebrew() {
-	if [[ -n "$(find_command brew)" ]]; then
+	if load_brew_shellenv; then
 		echo "Homebrew already installed"
 		return
 	fi
@@ -51,12 +70,13 @@ install_homebrew() {
 	echo "Installing Homebrew"
 	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-	for brew_bin in /opt/homebrew/bin/brew /home/linuxbrew/.linuxbrew/bin/brew; do
-		if [[ -x "${brew_bin}" ]]; then
-			eval "$(${brew_bin} shellenv)"
-			return
-		fi
-	done
+	if ! load_brew_shellenv; then
+		print_error "Homebrew installed but the brew executable was not found."
+		print_error "Expected a standard install under /opt/homebrew, /usr/local, or Linuxbrew; add brew to PATH and retry."
+		exit 1
+	fi
+
+	echo "Homebrew installation finished"
 }
 
 install_mise() {
@@ -70,8 +90,8 @@ install_mise() {
 }
 
 install_stow() {
-	if [[ -z "$(find_command brew)" ]]; then
-		print_error "Please make sure Homebrew is installed"
+	if ! load_brew_shellenv; then
+		print_error "Homebrew is required to install stow but brew could not be loaded"
 		exit 1
 	fi
 
@@ -108,8 +128,8 @@ main() {
 
 	check_dependencies
 	setup_null_file
-	install_mise
 	install_homebrew
+	install_mise
 	install_stow
 	symlink_dotfiles
 	run_darwin_setup
