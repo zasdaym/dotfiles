@@ -47,7 +47,7 @@ print_error() {
 }
 
 check_dependencies() {
-	for program in curl git openssl; do
+	for program in curl git; do
 		if [[ -z "$(find_command "${program}")" ]]; then
 			print_error "Please install ${program} first"
 			exit 1
@@ -90,6 +90,11 @@ install_mise() {
 }
 
 install_stow() {
+	if [[ -n "$(find_command stow)" ]]; then
+		echo "Stow already installed"
+		return
+	fi
+
 	if ! load_brew_shellenv; then
 		print_error "Homebrew is required to install stow but brew could not be loaded"
 		exit 1
