@@ -34,10 +34,6 @@ if status is-interactive
         zoxide init fish | source
     end
 
-    if type -q cf
-        cf completions fish | source
-    end
-
     abbr --add gcs "git commit -S -m"
     abbr --add ggpush "git push origin (git branch --show-current)"
     abbr --add ggpull "git pull origin (git branch --show-current)"
