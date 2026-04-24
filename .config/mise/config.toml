@@ -1,4 +1,5 @@
 [settings]
+plugin_autoupdate_last_check_duration = "0"
 
 [settings.npm]
 package_manager = "bun"
