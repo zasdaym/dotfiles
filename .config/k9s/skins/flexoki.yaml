@@ -34,95 +34,120 @@ magentaBright: &magentaBright "ce5d97"
 
 k9s:
   body:
-    fgColor: *base100
-    bgColor: *black
-    logoColor: *orangeBright
+    fgColor: *black
+    bgColor: *paper
+    logoColor: *orange
+    logoColorMsg: *base700
+    logoColorInfo: *green
+    logoColorWarn: *yellow
+    logoColorError: *red
   prompt:
-    fgColor: *base100
-    bgColor: *black
-    suggestColor: *cyanBright
+    fgColor: *black
+    bgColor: *paper
+    suggestColor: *cyan
     border:
-      command: *orangeBright
-      default: *cyanBright
+      command: *orange
+      default: *cyan
   info:
-    fgColor: *blueBright
-    sectionColor: *yellowBright
+    fgColor: *blue
+    sectionColor: *yellow
+    cpuColor: *green
+    memColor: *magenta
+    k9sRevColor: *cyan
   dialog:
-    fgColor: *base100
-    bgColor: *base950
-    buttonFgColor: *base100
-    buttonBgColor: *base800
-    buttonFocusFgColor: *black
-    buttonFocusBgColor: *yellowBright
-    labelFgColor: *orangeBright
-    fieldFgColor: *base100
+    fgColor: *black
+    bgColor: *base50
+    buttonFgColor: *black
+    buttonBgColor: *base100
+    buttonFocusFgColor: *paper
+    buttonFocusBgColor: *blue
+    labelFgColor: *orange
+    fieldFgColor: *black
   help:
-    fgColor: *base100
-    bgColor: *base950
-    keyColor: *cyanBright
-    numKeyColor: *magentaBright
-    sectionColor: *yellowBright
+    fgColor: *black
+    bgColor: *base50
+    keyColor: *cyan
+    numKeyColor: *magenta
+    sectionColor: *yellow
   frame:
     border:
-      fgColor: *base700
-      focusColor: *base400
+      fgColor: *base300
+      focusColor: *base600
     menu:
-      fgColor: *base100
+      fgColor: *base700
       fgStyle: dim
-      keyColor: *cyanBright
-      numKeyColor: *magentaBright
+      keyColor: *cyan
+      numKeyColor: *magenta
     crumbs:
-      fgColor: *base100
-      bgColor: *base900
-      activeColor: *base800
+      fgColor: *black
+      bgColor: *base100
+      activeColor: *base200
     status:
-      newColor: *cyanBright
-      modifyColor: *blueBright
-      addColor: *greenBright
-      errorColor: *redBright
-      highlightColor: *yellowBright
-      killColor: *magentaBright
+      newColor: *cyan
+      modifyColor: *blue
+      addColor: *green
+      pendingColor: *yellow
+      errorColor: *red
+      highlightColor: *yellow
+      killColor: *magenta
       completedColor: *base500
     title:
-      fgColor: *base100
-      bgColor: *black
-      highlightColor: *orangeBright
-      counterColor: *cyanBright
-      filterColor: *magentaBright
+      fgColor: *black
+      bgColor: *paper
+      highlightColor: *orange
+      counterColor: *cyan
+      filterColor: *magenta
   views:
     charts:
-      bgColor: default
+      bgColor: *paper
+      dialBgColor: *base50
+      chartBgColor: *base50
       defaultDialColors:
-        - *cyanBright
-        - *redBright
+        - *cyan
+        - *red
       defaultChartColors:
-        - *blueBright
-        - *orangeBright
+        - *blue
+        - *orange
+      resourceColors:
+        cpu:
+          - *green
+          - *yellow
+        memory:
+          - *blue
+          - *magenta
+      focusFgColor: *paper
+      focusBgColor: *blue
     table:
-      fgColor: *base100
-      bgColor: *black
+      fgColor: *black
+      bgColor: *paper
       cursorFgColor: *black
       cursorBgColor: *base200
-      markColor: *yellowBright
+      markColor: *yellow
       header:
-        fgColor: *base100
-        bgColor: *black
-        sorterColor: *cyanBright
-    xray:
-      fgColor: *base100
-      bgColor: *black
-      cursorColor: *base800
-      graphicColor: *blueBright
-      showIcons: false
-    yaml:
-      keyColor: *cyanBright
-      colonColor: *base500
-      valueColor: *base100
-    logs:
-      fgColor: *base100
-      bgColor: *black
-      indicator:
         fgColor: *black
-        bgColor: *orangeBright
-        toggleOnColor: *greenBright
+        bgColor: *base50
+        sorterColor: *cyan
+        selectedSortColumnColor: *blue
+    xray:
+      fgColor: *black
+      bgColor: *paper
+      cursorColor: *base200
+      cursorTextColor: *black
+      graphicColor: *blue
+      showIcons: false
+    picker:
+      mainColor: *black
+      focusColor: *blue
+      shortcutColor: *cyan
+    yaml:
+      keyColor: *cyan
+      colonColor: *base500
+      valueColor: *black
+    logs:
+      fgColor: *black
+      bgColor: *paper
+      indicator:
+        fgColor: *paper
+        bgColor: *orange
+        toggleOnColor: *green
         toggleOffColor: *base500
