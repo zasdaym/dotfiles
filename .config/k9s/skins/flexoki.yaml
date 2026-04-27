@@ -1,0 +1,128 @@
+paper: &paper "fffcf0"
+base50: &base50 "f2f0e5"
+base100: &base100 "e6e4d9"
+base150: &base150 "dad8ce"
+base200: &base200 "cecdc3"
+base300: &base300 "b7b5ac"
+base400: &base400 "9f9d96"
+base500: &base500 "878580"
+base600: &base600 "6f6e69"
+base700: &base700 "575653"
+base800: &base800 "403e3c"
+base850: &base850 "343331"
+base900: &base900 "282726"
+base950: &base950 "1c1b1a"
+black: &black "100f0f"
+
+red: &red "af3029"
+orange: &orange "bc5215"
+yellow: &yellow "ad8301"
+green: &green "66800b"
+cyan: &cyan "24837b"
+blue: &blue "205ea6"
+purple: &purple "5e409d"
+magenta: &magenta "a02f6f"
+
+redBright: &redBright "d14d41"
+orangeBright: &orangeBright "da702c"
+yellowBright: &yellowBright "d0a215"
+greenBright: &greenBright "879a39"
+cyanBright: &cyanBright "3aa99f"
+blueBright: &blueBright "4385be"
+purpleBright: &purpleBright "8b7ec8"
+magentaBright: &magentaBright "ce5d97"
+
+k9s:
+  body:
+    fgColor: *base100
+    bgColor: *black
+    logoColor: *orangeBright
+  prompt:
+    fgColor: *base100
+    bgColor: *black
+    suggestColor: *cyanBright
+    border:
+      command: *orangeBright
+      default: *cyanBright
+  info:
+    fgColor: *blueBright
+    sectionColor: *yellowBright
+  dialog:
+    fgColor: *base100
+    bgColor: *base950
+    buttonFgColor: *base100
+    buttonBgColor: *base800
+    buttonFocusFgColor: *black
+    buttonFocusBgColor: *yellowBright
+    labelFgColor: *orangeBright
+    fieldFgColor: *base100
+  help:
+    fgColor: *base100
+    bgColor: *base950
+    keyColor: *cyanBright
+    numKeyColor: *magentaBright
+    sectionColor: *yellowBright
+  frame:
+    border:
+      fgColor: *base700
+      focusColor: *base400
+    menu:
+      fgColor: *base100
+      fgStyle: dim
+      keyColor: *cyanBright
+      numKeyColor: *magentaBright
+    crumbs:
+      fgColor: *base100
+      bgColor: *base900
+      activeColor: *base800
+    status:
+      newColor: *cyanBright
+      modifyColor: *blueBright
+      addColor: *greenBright
+      errorColor: *redBright
+      highlightColor: *yellowBright
+      killColor: *magentaBright
+      completedColor: *base500
+    title:
+      fgColor: *base100
+      bgColor: *black
+      highlightColor: *orangeBright
+      counterColor: *cyanBright
+      filterColor: *magentaBright
+  views:
+    charts:
+      bgColor: default
+      defaultDialColors:
+        - *cyanBright
+        - *redBright
+      defaultChartColors:
+        - *blueBright
+        - *orangeBright
+    table:
+      fgColor: *base100
+      bgColor: *black
+      cursorFgColor: *black
+      cursorBgColor: *base200
+      markColor: *yellowBright
+      header:
+        fgColor: *base100
+        bgColor: *black
+        sorterColor: *cyanBright
+    xray:
+      fgColor: *base100
+      bgColor: *black
+      cursorColor: *base800
+      graphicColor: *blueBright
+      showIcons: false
+    yaml:
+      keyColor: *cyanBright
+      colonColor: *base500
+      valueColor: *base100
+    logs:
+      fgColor: *base100
+      bgColor: *black
+      indicator:
+        fgColor: *black
+        bgColor: *orangeBright
+        toggleOnColor: *greenBright
+        toggleOffColor: *base500

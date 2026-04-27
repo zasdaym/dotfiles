@@ -10,6 +10,7 @@ if status is-interactive
     set -gx GIT_EXTERNAL_DIFF difft
     set -gx EDITOR hx
     set -gx FZF_DEFAULT_OPTS --no-color
+    set -gx K9S_CONFIG_DIR "$HOME/.config/k9s"
     set -gx TF_PLUGIN_CACHE_DIR "$HOME/.terraform.d/plugin-cache"
 
     if type -q mise

@@ -1,0 +1,5 @@
+k9s:
+  ui:
+    logoless: true
+    noIcons: true
+    skin: flexoki
