@@ -1,5 +1,6 @@
 if status is-interactive
     fish_config theme choose None
+    set fish_color_comment normal
     set fish_greeting ""
 
     if test -d /opt/homebrew/bin
