@@ -15,6 +15,10 @@ print_error() {
 	echo "$*" >&2
 }
 
+log() {
+	printf '[INFO] %s\n' "$1"
+}
+
 find_command() {
 	command -v "$1" || true
 }
@@ -45,7 +49,7 @@ clone_repo() {
 	local target_dir="$1"
 
 	if [[ "${target_dir}" == "${SCRIPT_DIR}" ]] && is_repo_checkout; then
-		echo "Using existing checkout at ${target_dir}"
+		log "Using existing checkout at ${target_dir}"
 		return
 	fi
 
@@ -54,14 +58,14 @@ clone_repo() {
 		exit 1
 	fi
 
-	echo "Cloning dotfiles into ${target_dir}"
+	log "Cloning dotfiles into ${target_dir}"
 	git clone "${REPO_URL}" "${target_dir}"
 }
 
 run_local_installer() {
 	local target_dir="$1"
 
-	echo "Running local installer"
+	log "Running local installer"
 	bash "${target_dir}/scripts/install-local.sh"
 }
 

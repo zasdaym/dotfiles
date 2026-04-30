@@ -36,11 +36,9 @@ configure_dock() {
 
 configure_trackpad() {
 	log "Configuring Trackpad..."
-	for domain in com.apple.AppleMultitouchTrackpad com.apple.AppleBluetoothMultitouchTrackpad; do
-		set_default "${domain}" Clicking -bool true
-		set_default "${domain}" TrackpadRightClick -bool true
-		set_default "${domain}" TrackpadThreeFingerDrag -bool true
-	done
+	set_default com.apple.AppleMultitouchTrackpad Clicking -bool true
+	set_default com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
+	set_default com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 }
 
 configure_keyboard() {
