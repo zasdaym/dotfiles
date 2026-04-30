@@ -144,8 +144,8 @@ main() {
 	run_darwin_setup
 
 	log "Bootstrap completed, run these commands to finish:"
-	log "mise install"
-	log "brew bundle --file=\"${SCRIPT_DIR}/Brewfile\""
+	printf '%s\n' "mise install"
+	printf '%s\n' "brew bundle --file=\"${SCRIPT_DIR}/Brewfile\""
 }
 
 main "$@"
