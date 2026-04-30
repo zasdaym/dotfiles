@@ -7,7 +7,9 @@ set -o pipefail
 
 readonly REPO_URL="https://github.com/zasdaym/dotfiles.git"
 readonly SCRIPT_PATH="${BASH_SOURCE[0]}"
-readonly SCRIPT_DIR="$(cd "$(dirname "${SCRIPT_PATH}")" && pwd)"
+_script_dir="$(cd "$(dirname "${SCRIPT_PATH}")" && pwd)" || exit 1
+readonly SCRIPT_DIR="${_script_dir}"
+unset _script_dir
 
 print_error() {
 	echo "$*" >&2
