@@ -1,4 +1,5 @@
 brew "fish"
+brew "mosh"
 brew "stow"
 cask "brave-browser"
 cask "ghostty"
