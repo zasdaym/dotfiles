@@ -6,8 +6,16 @@ set -o nounset
 set -o pipefail
 
 readonly REPO_URL="https://github.com/zasdaym/dotfiles.git"
-readonly SCRIPT_PATH="${BASH_SOURCE[0]}"
-_script_dir="$(cd "$(dirname "${SCRIPT_PATH}")" && pwd)" || exit 1
+
+resolve_script_dir() {
+	local script_path="${BASH_SOURCE[0]:-}"
+
+	if [[ -n "${script_path}" && "${script_path}" != bash ]]; then
+		cd "$(dirname "${script_path}")" && pwd
+	fi
+}
+
+_script_dir="$(resolve_script_dir)" || exit 1
 readonly SCRIPT_DIR="${_script_dir}"
 unset _script_dir
 
