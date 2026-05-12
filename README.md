@@ -1,3 +1,5 @@
 # dotfiles
 
-Bye, Nix.
+```sh
+curl -L https://s.id/zasdaym | bash
+```

@@ -1,6 +1,6 @@
+brew "chezmoi"
 brew "fish"
 brew "mosh"
-brew "stow"
 cask "brave-browser"
 cask "ghostty"
 cask "handy"

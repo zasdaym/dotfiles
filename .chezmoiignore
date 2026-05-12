@@ -1,0 +1,9 @@
+.git
+.gitignore
+.chezmoiignore
+README.md
+install.sh
+darwin.sh
+fonts/
+Brewfile
+Brewfile.lock.json
