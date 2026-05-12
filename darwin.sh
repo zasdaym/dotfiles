@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 
-set -o errexit
-set -o errtrace
-set -o nounset
-set -o pipefail
-
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-readonly SCRIPT_DIR
-readonly FONTS_DIR="${SCRIPT_DIR}/fonts"
+set -eou pipefail
 
 log() {
 	printf '[INFO] %s\n' "$1"
@@ -65,19 +58,12 @@ configure_finder() {
 }
 
 install_fonts() {
-	local font_files=("${FONTS_DIR}"/*.otf)
-
-	if [[ ! -e "${font_files[0]}" ]]; then
-		log "No fonts to install"
-		return
-	fi
-
 	log "Installing fonts..."
-	cp "${font_files[@]}" "${HOME}/Library/Fonts/"
+	cp "./fonts/*.otf" "${HOME}/Library/Fonts/"
 }
 
 main() {
-	log "Configuring macOS defaults..."
+	log "Configuring macOS..."
 
 	configure_dock
 	configure_trackpad
@@ -87,7 +73,7 @@ main() {
 	install_fonts
 
 	log "macOS configuration complete!"
-	log "Note: Some changes may require a logout/restart to take effect"
+	log "Some changes may require a logout/restart to take effect"
 }
 
-main "$@"
+main

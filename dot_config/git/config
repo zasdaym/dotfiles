@@ -17,3 +17,10 @@
 
 [includeIf "gitdir:~/Developer/gcore/"]
         path = "~/.config/git/gcore.inc"
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/Users/zasda/.local/share/mise/shims/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/Users/zasda/.local/share/mise/shims/gh auth git-credential
