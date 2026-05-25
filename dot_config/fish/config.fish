@@ -8,7 +8,6 @@ if status is-interactive
     end
 
     set -gx CLOUDSDK_CONFIG "$HOME/.null"
-    set -gx GIT_EXTERNAL_DIFF difft
     set -gx EDITOR hx
     set -gx FZF_DEFAULT_OPTS --no-color
     set -gx K9S_CONFIG_DIR "$HOME/.config/k9s"
