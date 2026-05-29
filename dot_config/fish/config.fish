@@ -14,7 +14,8 @@ if status is-interactive
     set -gx TF_PLUGIN_CACHE_DIR "$HOME/.terraform.d/plugin-cache"
 
     if type -q mise
-        mise activate fish | source
+        fish_add_path "$HOME/.local/bin"
+        fish_add_path "$HOME/.local/share/mise/shims"
         mise completion fish | source
     end
 
