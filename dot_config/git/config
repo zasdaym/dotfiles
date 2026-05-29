@@ -20,7 +20,7 @@
 
 [credential "https://github.com"]
 	helper = 
-	helper = !/Users/zasda/.local/share/mise/shims/gh auth git-credential
+	helper = !/Users/zasda/.local/share/mise/installs/gh/2.93.0/gh_2.93.0_macOS_arm64/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
-	helper = !/Users/zasda/.local/share/mise/shims/gh auth git-credential
+	helper = !/Users/zasda/.local/share/mise/installs/gh/2.93.0/gh_2.93.0_macOS_arm64/bin/gh auth git-credential
