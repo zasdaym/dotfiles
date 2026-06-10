@@ -43,4 +43,5 @@ if status is-interactive
     abbr --add glog "git log --oneline --decorate --graph $argv"
     abbr --add gmsg "git log -1 --pretty=%B"
     abbr --add mosh "mosh --no-init"
+    abbr --add cra "chezmoi re-add && chezmoi git -- commit -aS && chezmoi git -- push"
 end
