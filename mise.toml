@@ -66,9 +66,19 @@ zoxide = "latest"
 # Self-manage the global mise config: symlink it back to this file.
 "~/.config/mise/config.toml" = "mise.toml"
 
-# Homebrew packages and casks are managed via the Brewfile.
-[bootstrap.hooks.post-packages]
-run = "brew bundle --file ~/.dotfiles/Brewfile"
+# Homebrew packages and casks.
+[bootstrap.packages]
+"brew:fish" = "latest"
+"brew:mosh" = "latest"
+"brew:pssh" = "latest"
+"brew-cask:helium-browser" = "latest"
+"brew-cask:ghostty" = "latest"
+"brew-cask:handy" = "latest"
+"brew-cask:orbstack" = "latest"
+"brew-cask:raycast" = "latest"
+"brew-cask:slack" = "latest"
+"brew-cask:visual-studio-code" = "latest"
+"brew-cask:wireshark-app" = "latest"
 
 # macOS defaults (ported from the old darwin.sh).
 [bootstrap.macos.defaults."com.apple.dock"]
