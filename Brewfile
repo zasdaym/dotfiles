@@ -1,4 +1,3 @@
-brew "chezmoi"
 brew "fish"
 brew "mosh"
 cask "brave-browser"

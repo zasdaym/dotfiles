@@ -1,0 +1,113 @@
+[settings]
+experimental = true
+plugin_autoupdate_last_check_duration = "0"
+dotfiles.root = "~/.dotfiles"
+dotfiles.default_mode = "symlink"
+
+[settings.npm]
+package_manager = "bun"
+
+[tools]
+buf = "latest"
+bun = "latest"
+claude = "latest"
+codex = "latest"
+delta = "latest"
+difftastic = "latest"
+dotenvx = "latest"
+elixir = "latest"
+erlang = "latest"
+fd = "latest"
+flyctl = "latest"
+fzf = "latest"
+gh = "latest"
+go = "latest"
+hurl = "latest"
+hyperfine = "latest"
+jq = "latest"
+jujutsu = "latest"
+k9s = "latest"
+kubectl = "latest"
+node = "latest"
+opentofu = "latest"
+rg = "latest"
+rust = "latest"
+sd = "latest"
+shellcheck = "latest"
+starship = "latest"
+usage = "latest"
+uv = "latest"
+yq = "latest"
+zoxide = "latest"
+
+"cargo:lisette" = "latest"
+"github:AlexanderGrooff/mermaid-ascii" = "latest"
+"github:git-town/git-town" = "latest"
+"github:jnsahaj/lumen" = "latest"
+"github:jsdelivr/globalping-cli" = "latest"
+"github:lance0/ttl" = "latest"
+"github:psviderski/uncloud" = "latest"
+"github:usagi-flow/evil-helix" = "latest"
+"go:github.com/almonk/bontree" = "latest"
+"npm:@mariozechner/pi-coding-agent" = "latest"
+"npm:agent-browser" = "latest"
+"npm:cf" = "latest"
+"npm:local-leetcode-trainer" = "latest"
+"pipx:mycli" = "latest"
+"pipx:pgcli" = "latest"
+
+[dotfiles]
+# symlink-each lets ~/.config (etc.) coexist with unmanaged files while linking
+# individual managed files into place.
+"~/.config" = { source = ".config", mode = "symlink-each" }
+"~/.pi" = { source = ".pi", mode = "symlink-each" }
+"~/.ssh" = { source = ".ssh", mode = "symlink-each" }
+"~/.zshrc" = ".zshrc"
+# Self-manage the global mise config: symlink it back to this file.
+"~/.config/mise/config.toml" = "mise.toml"
+
+# Homebrew packages and casks are managed via the Brewfile.
+[bootstrap.hooks.post-packages]
+run = "brew bundle --file ~/.dotfiles/Brewfile"
+
+# macOS defaults (ported from the old darwin.sh).
+[bootstrap.macos.defaults."com.apple.dock"]
+autohide = true
+launchanim = false
+mineffect = "scale"
+"minimize-to-application" = true
+"mru-spaces" = false
+"show-recents" = false
+tilesize = 32
+
+[bootstrap.macos.defaults."com.apple.AppleMultitouchTrackpad"]
+Clicking = true
+TrackpadRightClick = true
+TrackpadThreeFingerDrag = true
+
+[bootstrap.macos.defaults.NSGlobalDomain]
+KeyRepeat = 2
+InitialKeyRepeat = 15
+AppleShowAllExtensions = true
+
+[bootstrap.macos.defaults."com.apple.menuextra.battery"]
+ShowPercent = "YES"
+
+[bootstrap.macos.defaults."com.apple.finder"]
+AppleShowAllFiles = true
+ShowPathbar = true
+ShowStatusBar = true
+FXPreferredViewStyle = "Nlsv"
+FXDefaultSearchScope = "SCcf"
+FXEnableExtensionChangeWarning = false
+
+# Clear the Dock and restart affected apps (defaults the typed table can't express).
+[bootstrap.hooks.post-defaults]
+run = [
+  "defaults write com.apple.dock persistent-apps -array",
+  "killall Dock Finder 2>/dev/null || true",
+]
+
+# Install fonts.
+[bootstrap.hooks.final]
+run = "cp ~/.dotfiles/fonts/*.otf ~/Library/Fonts/"
