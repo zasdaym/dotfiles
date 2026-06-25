@@ -12,8 +12,6 @@ buf = "latest"
 bun = "latest"
 claude = "latest"
 codex = "latest"
-delta = "latest"
-difftastic = "latest"
 dotenvx = "latest"
 elixir = "latest"
 erlang = "latest"
@@ -40,19 +38,13 @@ uv = "latest"
 yq = "latest"
 zoxide = "latest"
 
-"cargo:lisette" = "latest"
 "github:AlexanderGrooff/mermaid-ascii" = "latest"
 "github:git-town/git-town" = "latest"
-"github:jnsahaj/lumen" = "latest"
 "github:jsdelivr/globalping-cli" = "latest"
 "github:lance0/ttl" = "latest"
 "github:psviderski/uncloud" = "latest"
 "github:usagi-flow/evil-helix" = "latest"
 "go:github.com/almonk/bontree" = "latest"
-"npm:@mariozechner/pi-coding-agent" = "latest"
-"npm:agent-browser" = "latest"
-"npm:cf" = "latest"
-"npm:local-leetcode-trainer" = "latest"
 "pipx:mycli" = "latest"
 "pipx:pgcli" = "latest"
 
@@ -60,7 +52,6 @@ zoxide = "latest"
 # symlink-each lets ~/.config (etc.) coexist with unmanaged files while linking
 # individual managed files into place.
 "~/.config" = { source = ".config", mode = "symlink-each" }
-"~/.pi" = { source = ".pi", mode = "symlink-each" }
 "~/.ssh" = { source = ".ssh", mode = "symlink-each" }
 "~/.zshrc" = ".zshrc"
 # Self-manage the global mise config: symlink it back to this file.
@@ -121,3 +112,6 @@ run = [
 # Install fonts.
 [bootstrap.hooks.final]
 run = "cp ~/.dotfiles/fonts/*.otf ~/Library/Fonts/"
+
+[bootstrap.user]
+login_shell = "/opt/homebrew/bin/fish"
