@@ -45,6 +45,7 @@ zoxide = "latest"
 "github:psviderski/uncloud" = "latest"
 "github:usagi-flow/evil-helix" = "latest"
 "go:github.com/almonk/bontree" = "latest"
+"npm:local-leetcode-trainer" = "latest"
 "pipx:mycli" = "latest"
 "pipx:pgcli" = "latest"
 
