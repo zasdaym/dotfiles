@@ -57,7 +57,6 @@ zoxide = "latest"
 # individual managed files into place.
 "~/.config" = { source = ".config", mode = "symlink-each" }
 "~/.ssh" = { source = ".ssh", mode = "symlink-each" }
-"~/.zshrc" = ".zshrc"
 # Self-manage the global mise config: symlink it back to this file.
 "~/.config/mise/config.toml" = "mise.toml"
 
