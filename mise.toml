@@ -1,5 +1,6 @@
 [settings]
 experimental = true
+minimum_release_age = "0s"
 plugin_autoupdate_last_check_duration = "0"
 dotfiles.root = "~/.dotfiles"
 dotfiles.default_mode = "symlink"
@@ -17,7 +18,6 @@ dotenvx = "latest"
 elixir = "latest"
 erlang = "latest"
 fd = "latest"
-flux2 = "latest"
 flyctl = "latest"
 fzf = "latest"
 gh = "latest"
