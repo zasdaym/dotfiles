@@ -16,16 +16,11 @@ if status is-interactive
     if type -q mise
         fish_add_path "$HOME/.local/bin"
         fish_add_path "$HOME/.local/share/mise/shims"
-        mise completion fish | source
     end
 
     if type -q fzf
         # fzf >= 0.48 provides fish integration via --fish.
         fzf --fish | source
-    end
-
-    if type -q docker
-        docker completion fish | source
     end
 
     if type -q starship
