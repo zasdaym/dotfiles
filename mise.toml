@@ -10,6 +10,7 @@ package_manager = "bun"
 
 [tools]
 argocd = "latest"
+aube = "latest"
 buf = "latest"
 bun = "latest"
 claude = "latest"
