@@ -78,6 +78,7 @@ launchanim = false
 mineffect = "scale"
 "minimize-to-application" = true
 "mru-spaces" = false
+orientation = "left"
 "show-recents" = false
 tilesize = 32
 
@@ -94,6 +95,9 @@ AppleShowAllExtensions = true
 [bootstrap.macos.defaults."com.apple.menuextra.battery"]
 ShowPercent = "YES"
 
+[bootstrap.macos.defaults."com.apple.Spotlight"]
+MenuItemHidden = true
+
 [bootstrap.macos.defaults."com.apple.finder"]
 AppleShowAllFiles = true
 ShowPathbar = true
@@ -101,12 +105,13 @@ ShowStatusBar = true
 FXPreferredViewStyle = "Nlsv"
 FXDefaultSearchScope = "SCcf"
 FXEnableExtensionChangeWarning = false
+NewWindowTarget = "PfHm"
 
 # Clear the Dock and restart affected apps (defaults the typed table can't express).
 [bootstrap.hooks.post-defaults]
 run = [
   "defaults write com.apple.dock persistent-apps -array",
-  "killall Dock Finder 2>/dev/null || true",
+  "killall Dock Finder SystemUIServer 2>/dev/null || true",
 ]
 
 # Install fonts.
