@@ -4,6 +4,7 @@ minimum_release_age = "0s"
 plugin_autoupdate_last_check_duration = "0"
 dotfiles.root = "~/.dotfiles"
 dotfiles.default_mode = "symlink"
+fetch_remote_versions_timeout = "5m"
 
 [settings.npm]
 package_manager = "bun"
@@ -69,6 +70,7 @@ zoxide = "latest"
 "brew-cask:helium-browser" = "latest"
 "brew-cask:ghostty" = "latest"
 "brew-cask:openvpn-connect" = "latest"
+"brew-cask:orbstack" = "latest"
 "brew-cask:slack" = "latest"
 "brew-cask:sol" = "latest"
 
