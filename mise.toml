@@ -110,9 +110,10 @@ FXDefaultSearchScope = "SCcf"
 FXEnableExtensionChangeWarning = false
 NewWindowTarget = "PfHm"
 
-# Clear the Dock and restart affected apps (defaults the typed table can't express).
+# Apply macOS setup that the typed defaults table can't express.
 [bootstrap.hooks.post-defaults]
 run = [
+  '''if [ "$(uname -s)" = "Darwin" ]; then test -f /etc/pam.d/sudo_local || sudo cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local; sudo sed -i '' 's/^#auth[[:space:]]*sufficient[[:space:]]*pam_tid\.so/auth       sufficient     pam_tid.so/' /etc/pam.d/sudo_local; fi''',
   "defaults write com.apple.dock persistent-apps -array",
   "killall Dock Finder SystemUIServer 2>/dev/null || true",
 ]
