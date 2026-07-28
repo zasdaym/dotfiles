@@ -68,6 +68,7 @@ zoxide = "latest"
 "brew:pssh" = "latest"
 "brew-cask:helium-browser" = "latest"
 "brew-cask:ghostty" = "latest"
+"brew-cask:openvpn-connect" = "latest"
 "brew-cask:slack" = "latest"
 "brew-cask:sol" = "latest"
 
