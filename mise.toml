@@ -68,12 +68,8 @@ zoxide = "latest"
 "brew:pssh" = "latest"
 "brew-cask:helium-browser" = "latest"
 "brew-cask:ghostty" = "latest"
-"brew-cask:handy" = "latest"
-"brew-cask:orbstack" = "latest"
-"brew-cask:raycast" = "latest"
 "brew-cask:slack" = "latest"
-"brew-cask:visual-studio-code" = "latest"
-"brew-cask:wireshark-app" = "latest"
+"brew-cask:sol" = "latest"
 
 # macOS defaults (ported from the old darwin.sh).
 [bootstrap.macos.defaults."com.apple.dock"]

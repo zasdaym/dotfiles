@@ -3,6 +3,9 @@ if status is-interactive
     set fish_color_comment normal
     set fish_greeting ""
 
+    fish_add_path "$HOME/.local/bin"
+    fish_add_path "$HOME/.local/share/mise/shims"
+
     if test -d /opt/homebrew/bin
         fish_add_path /opt/homebrew/bin
     end
@@ -12,11 +15,6 @@ if status is-interactive
     set -gx FZF_DEFAULT_OPTS --no-color
     set -gx K9S_CONFIG_DIR "$HOME/.config/k9s"
     set -gx TF_PLUGIN_CACHE_DIR "$HOME/.terraform.d/plugin-cache"
-
-    if type -q mise
-        fish_add_path "$HOME/.local/bin"
-        fish_add_path "$HOME/.local/share/mise/shims"
-    end
 
     if type -q fzf
         # fzf >= 0.48 provides fish integration via --fish.
