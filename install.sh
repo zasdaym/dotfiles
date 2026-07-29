@@ -3,6 +3,8 @@
 set -eou pipefail
 
 main() {
+  xcode-select --print-path >/dev/null 2>&1 || xcode-select --install
+
   command -v mise >/dev/null 2>&1 || curl https://mise.run | sh
 
   [ -d "${HOME}/.dotfiles" ] ||
