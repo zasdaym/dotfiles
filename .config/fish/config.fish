@@ -37,3 +37,8 @@ if status is-interactive
     abbr --add gmsg "git log -1 --pretty=%B"
     abbr --add mosh "mosh --no-init"
 end
+
+# >>> agterm agent-status >>>
+set -l agterm_integration "$HOME/.config/agterm/agent-status/shell/integration.fish"
+test -f "$agterm_integration"; and source "$agterm_integration"
+# <<< agterm agent-status <<<
