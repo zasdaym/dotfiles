@@ -49,6 +49,10 @@ zoxide = "latest"
 "github:jsdelivr/globalping-cli" = "latest"
 "github:usagi-flow/evil-helix" = "latest"
 
+"npm:@astrojs/language-server" = "latest"
+"npm:typescript-language-server" = "latest"
+"npm:yaml-language-server" = "latest"
+
 [dotfiles]
 # symlink-each lets ~/.config (etc.) coexist with unmanaged files while linking
 # individual managed files into place.
