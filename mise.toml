@@ -93,6 +93,7 @@ TrackpadThreeFingerDrag = true
 [bootstrap.macos.defaults.NSGlobalDomain]
 KeyRepeat = 2
 InitialKeyRepeat = 15
+ApplePressAndHoldEnabled = false
 AppleShowAllExtensions = true
 
 [bootstrap.macos.defaults."com.apple.menuextra.battery"]
