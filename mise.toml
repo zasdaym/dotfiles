@@ -66,7 +66,6 @@ zoxide = "latest"
 [bootstrap.packages]
 "brew:fish" = "latest"
 "brew:mosh" = "latest"
-"brew:pssh" = "latest"
 "brew-cask:chatgpt" = "latest"
 "brew-cask:helium-browser" = "latest"
 "brew-cask:ghostty" = "latest"
