@@ -42,6 +42,7 @@ shellcheck = "latest"
 starship = "latest"
 terraform = "latest"
 ty = "latest"
+usage = "latest"
 uv = "latest"
 yq = "latest"
 zoxide = "latest"
@@ -54,6 +55,7 @@ zoxide = "latest"
 "npm:@astrojs/language-server" = "latest"
 "npm:typescript-language-server" = "latest"
 "npm:yaml-language-server" = "latest"
+"npm:codex-multi-auth" = "latest"
 
 [dotfiles]
 # symlink-each lets ~/.config (etc.) coexist with unmanaged files while linking
@@ -67,11 +69,11 @@ zoxide = "latest"
 [bootstrap.packages]
 "brew:fish" = "latest"
 "brew:mosh" = "latest"
+"brew-cask:1password" = "latest"
 "brew-cask:chatgpt" = "latest"
 "brew-cask:helium-browser" = "latest"
 "brew-cask:ghostty" = "latest"
 "brew-cask:openvpn-connect" = "latest"
-"brew-cask:slack" = "latest"
 "brew-cask:sol" = "latest"
 
 # macOS defaults (ported from the old darwin.sh).
