@@ -69,7 +69,6 @@ zoxide = "latest"
 [bootstrap.packages]
 "brew:fish" = "latest"
 "brew:mosh" = "latest"
-"brew:paneru" = "latest"
 "brew-cask:1password" = "latest"
 "brew-cask:chatgpt" = "latest"
 "brew-cask:helium-browser" = "latest"
@@ -87,6 +86,7 @@ mineffect = "scale"
 orientation = "left"
 "show-recents" = false
 tilesize = 32
+"workspaces-auto-swoosh" = false
 
 [bootstrap.macos.defaults."com.apple.AppleMultitouchTrackpad"]
 Clicking = true
