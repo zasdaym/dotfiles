@@ -42,3 +42,7 @@ end
 set -l agterm_integration "$HOME/.config/agterm/agent-status/shell/integration.fish"
 test -f "$agterm_integration"; and source "$agterm_integration"
 # <<< agterm agent-status <<<
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
