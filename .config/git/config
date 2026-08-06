@@ -20,6 +20,8 @@
 
 [includeIf "gitdir:~/Developer/gcore/"]
         path = "~/.config/git/gcore.inc"
+[includeIf "gitdir:~/Developer/victoria/"]
+        path = "~/.config/git/victoria.inc"
 
 [credential "https://github.com"]
 	helper = 
