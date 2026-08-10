@@ -76,11 +76,9 @@ zoxide = "latest"
 "brew:mosh" = "latest"
 "brew-cask:1password" = "latest"
 "brew-cask:chatgpt" = "latest"
-"brew-cask:cursor" = "latest"
 "brew-cask:helium-browser" = "latest"
 "brew-cask:ghostty" = "latest"
 "brew-cask:openvpn-connect" = "latest"
-"brew-cask:sol" = "latest"
 
 # macOS defaults (ported from the old darwin.sh).
 [bootstrap.macos.defaults."com.apple.dock"]
