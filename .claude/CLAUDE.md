@@ -1,0 +1,4 @@
+- Avoid code comments unless the function is really complex
+- Always sign and sign-off commit
+- Never use commit body
+- Only write "Fixes #issue_number" when creating PR
