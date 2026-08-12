@@ -1,4 +1,5 @@
-- Only report to me in ASD-STE100 Simplified Technical English
+- Write in ASD-STE100 Simplified Technical English
+- Follow Google Developer Documentation Style Guide
 - Avoid code comments unless the function is really complex
 - Always sign and sign-off commit
 - Never use commit body
