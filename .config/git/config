@@ -18,11 +18,6 @@
         email = "zasdaym@gmail.com"
         signingKey = "~/.ssh/id_ed25519.pub"
 
-[includeIf "gitdir:~/Developer/gcore/"]
-        path = "~/.config/git/gcore.inc"
-[includeIf "gitdir:~/Developer/victoria/"]
-        path = "~/.config/git/victoria.inc"
-
 [credential "https://github.com"]
 	helper = 
 	helper = !/Users/zasda/.local/share/mise/shims/gh auth git-credential
