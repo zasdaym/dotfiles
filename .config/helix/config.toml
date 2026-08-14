@@ -2,3 +2,6 @@ theme = "flexoki_light"
 
 [editor]
 default-yank-register = "+"
+
+[editor.file-picker]
+hidden = false
