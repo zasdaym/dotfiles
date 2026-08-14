@@ -51,7 +51,6 @@ yq = "latest"
 zoxide = "latest"
 
 "aqua:grafana/gcx" = "latest"
-"github:letstri/druk" = "latest"
 "github:jnsahaj/lumen" = "latest"
 "github:jsdelivr/globalping-cli" = "latest"
 "github:sarub0b0/kubetui" = "latest"
