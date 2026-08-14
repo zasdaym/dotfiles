@@ -1,6 +1,6 @@
 - Write in ASD-STE100 Simplified Technical English
 - Follow Google Developer Documentation Style Guide
-- Avoid code comments unless the function is really complex
+- Avoid code comments
 - Always sign and sign-off commit
-- Never use commit body
-- Only write "Fixes #issue_number" when creating PR
+- Write nothing on commit body
+- Write nothing when opening a PR
