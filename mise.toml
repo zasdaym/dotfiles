@@ -50,9 +50,10 @@ yq = "latest"
 zoxide = "latest"
 
 "aqua:grafana/gcx" = "latest"
-"github:sarub0b0/kubetui" = "latest"
-"github:jsdelivr/globalping-cli" = "latest"
+"github:letstri/druk" = "latest"
 "github:jnsahaj/lumen" = "latest"
+"github:jsdelivr/globalping-cli" = "latest"
+"github:sarub0b0/kubetui" = "latest"
 "github:usagi-flow/evil-helix" = "latest"
 
 "npm:@astrojs/language-server" = "latest"
