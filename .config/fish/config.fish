@@ -11,7 +11,7 @@ if status is-interactive
     end
 
     set -gx CLOUDSDK_CONFIG "$HOME/.null"
-    set -gx EDITOR nvim
+    set -gx EDITOR hx
     set -gx FZF_DEFAULT_OPTS --no-color
     set -gx K9S_CONFIG_DIR "$HOME/.config/k9s"
     set -gx TF_PLUGIN_CACHE_DIR "$HOME/.terraform.d/plugin-cache"

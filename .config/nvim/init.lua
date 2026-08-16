@@ -27,6 +27,10 @@ vim.o.smartcase = true
 vim.opt.fillchars:append({ eob = " " })
 vim.lsp.enable({ "gopls", "ty", "yamlls" })
 
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+
 -- tab completion
 vim.opt.completeopt = { "menuone", "noselect", "fuzzy", "nosort" }
 MiniKeymap.map_multistep("i", "<Tab>", { "pmenu_next" })
@@ -43,9 +47,19 @@ MiniKeymap.map_combo("t", "kj", "<BS><BS><C-\\><C-n>")
 
 -- keymap
 vim.g.mapleader = " "
+
 vim.keymap.set("n", "<leader>e", function()
   MiniFiles.open()
 end, { desc = "File explorer" })
+
 vim.keymap.set("n", "<leader>f", function()
   MiniPick.builtin.files({ tool = "git" })
 end, { desc = "Find files" })
+
+vim.keymap.set('n', ']g', function()
+  vim.diagnostic.jump({ count = 1, float = true})
+end, { desc = "Next diagnostic" })
+
+vim.keymap.set('n', '[g', function()
+  vim.diagnostic.jump({ count = -1, float = true})
+end, { desc = "Prev diagnostic" })
