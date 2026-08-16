@@ -1,11 +1,13 @@
 -- plugins
 
 vim.pack.add({
+  { src = "https://github.com/asiryk/auto-hlsearch.nvim" },
   { src = "https://github.com/kepano/flexoki-neovim" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
   { src = "https://github.com/nvim-mini/mini.nvim" },
 })
 
+require("auto-hlsearch").setup()
 require("mini.completion").setup()
 require("mini.diff").setup({
   view = {
