@@ -56,6 +56,7 @@ zoxide = "latest"
 "github:jnsahaj/lumen" = "latest"
 "github:jsdelivr/globalping-cli" = "latest"
 "github:sarub0b0/kubetui" = "latest"
+"github:skyhook-io/radar" = "latest"
 "github:usagi-flow/evil-helix" = "latest"
 
 "npm:@astrojs/language-server" = "latest"
