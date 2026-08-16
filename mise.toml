@@ -53,6 +53,7 @@ yq = "latest"
 zoxide = "latest"
 
 "aqua:grafana/gcx" = "latest"
+"github:almonk/bontree" = "latest"
 "github:jnsahaj/lumen" = "latest"
 "github:jsdelivr/globalping-cli" = "latest"
 "github:sarub0b0/kubetui" = "latest"
