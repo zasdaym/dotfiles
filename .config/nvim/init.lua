@@ -1,6 +1,7 @@
 vim.o.number = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.opt.completeopt = { "menuone", "noselect", "fuzzy", "nosort" }
 vim.opt.fillchars:append({ eob = " " })
 
 vim.pack.add({
@@ -10,7 +11,14 @@ vim.pack.add({
 })
 
 require("mini.completion").setup()
+require("mini.diff").setup({
+  view = {
+    style = "sign"
+  }
+})
 require("mini.extra").setup()
+require("mini.git").setup()
+require("mini.icons").setup()
 require("mini.keymap").setup()
 require("mini.pairs").setup()
 require("mini.pick").setup()
