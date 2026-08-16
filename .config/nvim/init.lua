@@ -9,12 +9,9 @@ vim.pack.add({
 
 require("auto-hlsearch").setup()
 require("mini.completion").setup()
-require("mini.diff").setup({
-  view = {
-    style = "sign"
-  }
-})
+require("mini.diff").setup()
 require("mini.extra").setup()
+require("mini.files").setup()
 require("mini.git").setup()
 require("mini.icons").setup()
 require("mini.keymap").setup()
@@ -46,6 +43,9 @@ MiniKeymap.map_combo("t", "kj", "<BS><BS><C-\\><C-n>")
 
 -- keymap
 vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>e", function()
+  MiniFiles.open()
+end, { desc = "File explorer" })
 vim.keymap.set("n", "<leader>f", function()
   MiniPick.builtin.files({ tool = "git" })
 end, { desc = "Find files" })
