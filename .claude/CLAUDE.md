@@ -1,7 +1,5 @@
 ---
-
 alwaysApply: true
-
 ---
 
 ## Writing
@@ -22,4 +20,3 @@ alwaysApply: true
 
 - Write nothing when opening a PR
 - Always open a PR as draft
-
