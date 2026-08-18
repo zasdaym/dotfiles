@@ -71,7 +71,7 @@ zoxide = "latest"
 "~/.ssh" = { source = ".ssh", mode = "symlink-each" }
 "~/.claude/CLAUDE.md" = ".claude/CLAUDE.md"
 "~/.codex/AGENTS.md" = ".claude/CLAUDE.md"
-"~/.cursor/AGENTS.md" = ".claude/CLAUDE.md"
+"~/.cursor/rules/main.mdc" = ".claude/CLAUDE.md"
 # Self-manage the global mise config: symlink it back to this file.
 "~/.config/mise/config.toml" = "mise.toml"
 
