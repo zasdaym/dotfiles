@@ -10,6 +10,7 @@ alwaysApply: true
 ## Code style
 
 - Avoid code comments
+- Follow https://google.github.io/styleguide/go/guide
 
 ## Git
 
