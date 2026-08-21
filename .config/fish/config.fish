@@ -36,6 +36,7 @@ if status is-interactive
     abbr --add glog "git log --oneline --decorate --graph $argv"
     abbr --add gmsg "git log -1 --pretty=%B"
     abbr --add mosh "mosh --no-init"
+    abbr --add curl-http3 "docker run -ti --network host --rm alpine/curl-http3 curl"
 end
 
 # Added by OrbStack: command-line tools and integration
