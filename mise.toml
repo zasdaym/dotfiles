@@ -10,6 +10,7 @@ fetch_remote_versions_timeout = "5m"
 package_manager = "bun"
 
 [tools]
+antigravity-cli = "latest"
 argocd = "latest"
 aube = "latest"
 aws = { version = "latest", symlink_bins = "true" }
