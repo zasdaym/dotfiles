@@ -1,5 +1,5 @@
 command = "/opt/homebrew/bin/fish"
 font-family = "TX-02"
 macos-titlebar-proxy-icon = hidden
-theme = dark:Flexoki Dark,light:Flexoki Light
+theme = dark:Rose Pine Moon,light:Rose Pine Dawn
 window-padding-x = 8
