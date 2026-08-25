@@ -61,6 +61,7 @@ zoxide = "latest"
 "github:sarub0b0/kubetui" = "latest"
 "github:skyhook-io/radar" = "latest"
 "github:usagi-flow/evil-helix" = "latest"
+"github:vercel-labs/fx" = "latest"
 
 "npm:@astrojs/language-server" = "latest"
 "npm:typescript-language-server" = "latest"
