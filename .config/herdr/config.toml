@@ -1,10 +1,9 @@
 onboarding = false
 
 [theme]
-
 auto_switch = true
-light_name = "rose-pine-dawn"
 dark_name = "rose-pine"
+light_name = "rose-pine-dawn"
 
 [ui]
 hide_tab_bar_when_single_tab = true
