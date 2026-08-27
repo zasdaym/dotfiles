@@ -12,3 +12,6 @@ prompt_new_tab_name = false
 
 [ui.sidebar.spaces]
 row_gap = 1
+
+[ui.toast.clipboard]
+position = "top-right"
