@@ -6,7 +6,6 @@ dark_name = "rose-pine"
 light_name = "rose-pine-dawn"
 
 [ui]
-hide_tab_bar_when_single_tab = true
 prompt_new_tab_name = false
 
 [ui.sidebar.spaces]
