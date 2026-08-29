@@ -5,6 +5,14 @@ auto_switch = true
 dark_name = "rose-pine"
 light_name = "rose-pine-dawn"
 
+[keys]
+switch_tab = "cmd+1..9"
+new_tab = "cmd+t"
+new_workspace = "cmd+n"
+new_worktree = "cmd+shift+n"
+split_vertical = "cmd+d"
+goto = "cmd+/"
+
 [ui]
 prompt_new_tab_name = false
 
