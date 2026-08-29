@@ -1,0 +1,5 @@
+[bootstrap.hooks.final]
+run = "mkdir -p ~/.local/share/fonts && cp ~/.dotfiles/fonts/*.otf ~/.local/share/fonts/"
+
+[bootstrap.user]
+login_shell = "/home/linuxbrew/.linuxbrew/bin/fish"

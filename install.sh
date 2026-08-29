@@ -2,51 +2,47 @@
 
 set -eou pipefail
 
-install_xcode_tools() {
+require_command_line_tools() {
   if xcode-select --print-path >/dev/null 2>&1; then
     return
   fi
 
-  xcode-select --install
+  printf 'Apple Command Line Tools are required.\n' >&2
+  printf 'Install them with: xcode-select --install\n' >&2
+  return 1
+}
 
-  if ! { exec 3<>/dev/tty; } 2>/dev/null; then
-    printf 'Cannot wait for input because no terminal is available.\n' >&2
-    return 1
-  fi
+install_mise() {
+  local install_path="$1"
 
-  printf 'Complete the Command Line Tools installation, then press Enter.\n' >&3
-
-  while true; do
-    if ! IFS= read -r <&3; then
-      exec 3>&-
-      printf 'Could not read input from the terminal.\n' >&2
-      return 1
-    fi
-
-    if xcode-select --print-path >/dev/null 2>&1; then
-      exec 3>&-
-      return
-    fi
-
-    printf 'Command Line Tools installation is not complete. Press Enter to check again.\n' >&3
-  done
+  curl --fail --show-error --silent --location https://mise.run |
+    MISE_INSTALL_PATH="${install_path}" sh
 }
 
 main() {
+  local mise_env
   local mise_bin="${HOME}/.local/bin/mise"
+  local os
 
-  if [[ "$(uname -s)" != "Darwin" ]]; then
-    printf 'This installer supports macOS only.\n' >&2
+  os="$(uname -s)"
+  case "${os}" in
+  Darwin)
+    mise_env="macos"
+    require_command_line_tools
+    ;;
+  Linux)
+    mise_env="linux"
+    ;;
+  *)
+    printf 'This installer does not support %s.\n' "${os}" >&2
     return 1
-  fi
-
-  install_xcode_tools
+    ;;
+  esac
 
   if command -v mise >/dev/null 2>&1; then
     mise_bin="$(command -v mise)"
   else
-    curl --fail --show-error --silent --location --proto '=https' --tlsv1.2 \
-      https://mise.run | sh
+    install_mise "${mise_bin}"
   fi
 
   if [[ ! -x "${mise_bin}" ]]; then
@@ -54,11 +50,16 @@ main() {
     return 1
   fi
 
-  [ -d "${HOME}/.dotfiles" ] ||
+  if ! command -v git >/dev/null 2>&1; then
+    printf 'Git is required. Install Git and run this installer again.\n' >&2
+    return 1
+  fi
+
+  [[ -d "${HOME}/.dotfiles" ]] ||
     git clone https://github.com/zasdaym/dotfiles.git "${HOME}/.dotfiles"
 
   cd "${HOME}/.dotfiles"
-  "${mise_bin}" bootstrap --yes
+  "${mise_bin}" -E "${mise_env}" bootstrap --yes
 }
 
 main

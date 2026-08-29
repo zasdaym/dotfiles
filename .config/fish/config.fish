@@ -10,6 +10,10 @@ if status is-interactive
         fish_add_path /opt/homebrew/bin
     end
 
+    if test -d /home/linuxbrew/.linuxbrew/bin
+        fish_add_path /home/linuxbrew/.linuxbrew/bin
+    end
+
     set -gx CLOUDSDK_CONFIG "$HOME/.null"
     set -gx EDITOR hx
     set -gx FZF_DEFAULT_OPTS --no-color
