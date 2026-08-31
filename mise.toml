@@ -10,7 +10,6 @@ fetch_remote_versions_timeout = "5m"
 package_manager = "bun"
 
 [tools]
-antigravity-cli = "latest"
 argocd = "latest"
 aube = "latest"
 aws = { version = "latest", symlink_bins = "true" }
@@ -27,7 +26,6 @@ flyctl = "latest"
 fzf = "latest"
 gh = "latest"
 go = "latest"
-grok = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 helm = "latest"
 helmfile = "latest"
@@ -38,6 +36,7 @@ jq = "latest"
 jujutsu = "latest"
 kind = "latest"
 kubectl = "latest"
+neovim = "latest"
 node = "latest"
 opentofu = "latest"
 rg = "latest"
@@ -66,7 +65,6 @@ zoxide = "latest"
 "npm:@astrojs/language-server" = "latest"
 "npm:typescript-language-server" = "latest"
 "npm:yaml-language-server" = "latest"
-"npm:codex-multi-auth" = "latest"
 
 [dotfiles]
 # symlink-each lets ~/.config (etc.) coexist with unmanaged files while linking
