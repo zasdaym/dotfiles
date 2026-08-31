@@ -74,6 +74,7 @@ zoxide = "latest"
 "~/.config" = { source = ".config", mode = "symlink-each" }
 "~/.ssh" = { source = ".ssh", mode = "symlink-each" }
 "~/.claude/CLAUDE.md" = ".claude/CLAUDE.md"
+"~/.config/AGENTS.md" = ".claude/CLAUDE.md"
 "~/.codex/AGENTS.md" = ".claude/CLAUDE.md"
 "~/.fx/AGENTS.md" = ".claude/CLAUDE.md"
 "~/.cursor/rules/main.mdc" = ".claude/CLAUDE.md"
