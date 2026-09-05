@@ -11,7 +11,6 @@ package_manager = "bun"
 
 [tools]
 argocd = "latest"
-aube = "latest"
 aws = { version = "latest", symlink_bins = "true" }
 buf = "latest"
 bun = "latest"
