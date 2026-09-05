@@ -26,3 +26,9 @@ signingKey = "~/.ssh/id_ed25519.pub"
 
 [include]
 path = ~/.config/git/private.inc
+[credential "https://github.com"]
+	helper = 
+	helper = !/Users/zasda/.local/share/mise/installs/gh/latest/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/Users/zasda/.local/share/mise/installs/gh/latest/bin/gh auth git-credential
