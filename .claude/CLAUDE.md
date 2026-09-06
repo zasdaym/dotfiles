@@ -4,20 +4,21 @@ alwaysApply: true
 
 ## Writing
 
-- Write in ASD-STE100 Simplified Technical English
-- Follow Google Developer Documentation Style Guide
+- Write plain, concise English. Use short sentences, active voice, and consistent terms.
 
 ## Code style
 
-- Avoid code comments
-- Follow https://google.github.io/styleguide/go/guide
+- Avoid comments that repeat the code. Explain non-obvious decisions and constraints only if needed.
+- Test observable behavior and meaningful failure cases. Avoid tests that repeat implementation logic or only verify mock setup.
+- Add defensive checks at trust boundaries or for realistic failure modes. Within trusted code, rely on established invariants. Avoid redundant validation, speculative fallbacks, and error handling that hides bugs.
+- For Go, follow https://google.github.io/styleguide/go/guide.
 
 ## Git
 
-- Commit with git commit --gpg-sign --signoff
-- Write nothing on commit body
+- Commit with `git commit --gpg-sign --signoff`.
+- Use a subject-only commit message, except for the required Signed-off-by trailer.
 
 ## PR
 
-- Write nothing when opening a PR
-- Always open a PR as draft
+- Give PRs a descriptive title and leave the description empty.
+- Always open a PR as draft.
