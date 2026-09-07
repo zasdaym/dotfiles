@@ -1,5 +1,6 @@
 [bootstrap.packages]
 "brew-cask:1password" = "latest"
+"brew-cask:caffeine" = "latest"
 "brew-cask:chatgpt" = "latest"
 "brew-cask:helium-browser" = "latest"
 "brew-cask:ghostty" = "latest"
