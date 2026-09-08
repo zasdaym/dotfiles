@@ -1,6 +1,7 @@
 theme = "rose_pine_dawn"
 
 [editor]
+auto-format = false
 default-yank-register = "+"
 
 [editor.file-picker]
