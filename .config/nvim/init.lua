@@ -10,6 +10,8 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.number = true
 vim.opt.updatetime = 300
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Plugins ---------------------------------------------------------------
 
