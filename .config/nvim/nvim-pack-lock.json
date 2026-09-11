@@ -5,6 +5,10 @@
       "src": "https://github.com/asiryk/auto-hlsearch.nvim",
       "version": "'1.1.0'"
     },
+    "flexoki-neovim": {
+      "rev": "c3e2251e813d29d885a7cbbe9808a7af234d845d",
+      "src": "https://github.com/kepano/flexoki-neovim"
+    },
     "mini.nvim": {
       "rev": "9d01f392b33fb2ba36fbc87fc0bf4453e63ffb0a",
       "src": "https://github.com/nvim-mini/mini.nvim"
