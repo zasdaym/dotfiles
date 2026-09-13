@@ -20,6 +20,7 @@ install_mise() {
 }
 
 main() {
+  local dotfiles_dir="${HOME}/.dotfiles"
   local mise_env
   local mise_bin="${HOME}/.local/bin/mise"
   local os
@@ -55,10 +56,18 @@ main() {
     return 1
   fi
 
-  [[ -d "${HOME}/.dotfiles" ]] ||
-    git clone https://github.com/zasdaym/dotfiles.git "${HOME}/.dotfiles"
+  if [[ -e "${dotfiles_dir}" || -L "${dotfiles_dir}" ]]; then
+    if [[ ! -d "${dotfiles_dir}" ]] ||
+      [[ ! -d "${dotfiles_dir}/.git" ]] ||
+      [[ ! -f "${dotfiles_dir}/mise.toml" ]]; then
+      printf '%s exists but is not a valid dotfiles checkout.\n' "${dotfiles_dir}" >&2
+      return 1
+    fi
+  else
+    git clone https://github.com/zasdaym/dotfiles.git "${dotfiles_dir}"
+  fi
 
-  cd "${HOME}/.dotfiles"
+  cd "${dotfiles_dir}"
   "${mise_bin}" -E "${mise_env}" bootstrap --yes
 }
 
