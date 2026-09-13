@@ -25,10 +25,6 @@ vim.api.nvim_create_autocmd("PackChanged", {
 
 vim.pack.add({
 	{
-		src = "https://github.com/kepano/flexoki-neovim",
-		name = "flexoki-neovim",
-	},
-	{
 		src = "https://github.com/rose-pine/neovim",
 		name = "rose-pine",
 	},
@@ -120,11 +116,10 @@ vim.diagnostic.config({
 -- Theme -----------------------------------------------------------------
 
 require("rose-pine").setup({
-	variant = "auto",
-	dark_variant = "moon",
+	variant = "dawn",
 	styles = {
 		italic = false,
 	},
 })
 
-vim.cmd("colorscheme flexoki-light")
+vim.cmd("colorscheme rose-pine")
