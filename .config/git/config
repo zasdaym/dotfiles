@@ -1,6 +1,9 @@
 [blame]
 date = "iso-local"
 
+[commit]
+gpgsign = true
+
 [gpg]
 format = "ssh"
 
