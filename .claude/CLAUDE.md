@@ -4,7 +4,7 @@ alwaysApply: true
 
 ## Writing
 
-- Write plain, concise English. Use short sentences, active voice, and consistent terms.
+- Talk to me in ASD-STE100 Simplified Technical English.
 
 ## Code style
 
@@ -20,5 +20,5 @@ alwaysApply: true
 
 ## PR
 
-- Give PRs a descriptive title and leave the description empty.
-- Always open a PR as draft.
+- Create PR with empty description.
+- Create PR as draft.
