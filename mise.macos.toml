@@ -1,11 +1,12 @@
 [bootstrap.packages]
-"brew-cask:rar" = "latest"
 "brew-cask:1password" = "latest"
+"brew-cask:brave-origin" = "latest"
 "brew-cask:caffeine" = "latest"
 "brew-cask:chatgpt" = "latest"
 "brew-cask:helium-browser" = "latest"
 "brew-cask:ghostty" = "latest"
 "brew-cask:openvpn-connect" = "latest"
+"brew-cask:rar" = "latest"
 
 [bootstrap.macos.defaults."com.apple.dock"]
 autohide = true
