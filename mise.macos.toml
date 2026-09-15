@@ -1,5 +1,9 @@
+[bootstrap.brew.taps]
+"abue-ammar/tinycast" = "https://github.com/abue-ammar/homebrew-tinycast.git"
+
 [bootstrap.packages]
 "brew-cask:1password" = "latest"
+# "brew-cask:abue-ammar/tinycast/tinycast" = "latest"
 "brew-cask:brave-origin" = "latest"
 "brew-cask:caffeine" = "latest"
 "brew-cask:chatgpt" = "latest"
