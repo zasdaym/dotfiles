@@ -64,6 +64,7 @@ zoxide = "latest"
 "github:jsdelivr/globalping-cli" = "latest"
 "github:sarub0b0/kubetui" = "latest"
 "github:skyhook-io/radar" = "latest"
+"github:vercel-labs/fx" = "latest"
 
 "npm:@astrojs/language-server" = "latest"
 "npm:bash-language-server" = "latest"
