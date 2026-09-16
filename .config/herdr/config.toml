@@ -1,7 +1,7 @@
 onboarding = false
 
 [theme]
-name = "terminal"
+name = "rose-pine-dawn"
 
 [keys]
 switch_tab = "cmd+1..9"
