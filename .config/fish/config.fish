@@ -16,11 +16,11 @@ if status is-interactive
 
     set -gx EDITOR hx
     set -gx FZF_DEFAULT_OPTS '
-	--color=fg:#797593,bg:#FAF4ED,hl:#D7827E
-	--color=fg+:#575279,bg+:#F2E9E1,hl+:#D7827E
-	--color=border:#DFDAD9,header:#286983,gutter:#FAF4ED
-	--color=spinner:#EA9D34,info:#56949F
-	--color=pointer:#907AA9,marker:#B4637A,prompt:#797593'
+        --color=fg:#B7B5AC,bg:#FFFCF0,hl:#100F0F
+       	--color=fg+:#B7B5AC,bg+:#F2F0E5,hl+:#100F0F
+       	--color=border:#AF3029,header:#100F0F,gutter:#FFFCF0
+       	--color=spinner:#3AA99F,info:#3AA99F,separator:#F2F0E5
+       	--color=pointer:#D0A215,marker:#D14D41,prompt:#D0A215'
 
     if type -q fzf
         # fzf >= 0.48 provides fish integration via --fish.
