@@ -1,13 +1,13 @@
 {
-  "model": "opus[1m]",
-  "syntaxHighlightingDisabled": false,
-  "skipDangerousModePermissionPrompt": true,
-  "theme": "custom:flexoki-light",
-  "permissions": {
-    "defaultMode": "bypassPermissions"
-  },
   "attribution": {
     "commit": "",
     "pr": ""
-  }
+  },
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "model": "opus[1m]",
+  "syntaxHighlightingDisabled": false,
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "custom:flexoki-light"
 }
