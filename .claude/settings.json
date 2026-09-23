@@ -3,6 +3,9 @@
   "syntaxHighlightingDisabled": false,
   "skipDangerousModePermissionPrompt": true,
   "theme": "auto",
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
   "attribution": {
     "commit": "",
     "pr": ""
