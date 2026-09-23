@@ -78,6 +78,7 @@ zoxide = "latest"
 "~/.ssh" = { source = ".ssh", mode = "symlink-each" }
 "~/.claude/CLAUDE.md" = ".claude/CLAUDE.md"
 "~/.claude/settings.json" = ".claude/settings.json"
+"~/.claude/themes/flexoki-light.json" = ".claude/themes/flexoki-light.json"
 "~/.codex/AGENTS.md" = ".claude/CLAUDE.md"
 "~/.cursor/rules/main.mdc" = ".claude/CLAUDE.md"
 # Self-manage the global mise config: symlink it back to this file.

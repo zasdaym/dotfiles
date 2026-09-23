@@ -2,7 +2,7 @@
   "model": "opus[1m]",
   "syntaxHighlightingDisabled": false,
   "skipDangerousModePermissionPrompt": true,
-  "theme": "auto",
+  "theme": "custom:flexoki-light",
   "permissions": {
     "defaultMode": "bypassPermissions"
   },
