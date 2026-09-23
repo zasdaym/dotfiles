@@ -1,0 +1,10 @@
+{
+  "model": "opus[1m]",
+  "syntaxHighlightingDisabled": false,
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "auto",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  }
+}
