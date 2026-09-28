@@ -70,7 +70,6 @@ zoxide = "latest"
 "npm:bash-language-server" = "latest"
 "npm:typescript-language-server" = "latest"
 "npm:yaml-language-server" = "latest"
-"github:px0-ai/px0" = "latest"
 
 [dotfiles]
 # symlink-each lets ~/.config (etc.) coexist with unmanaged files while linking
