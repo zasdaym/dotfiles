@@ -1,4 +1,4 @@
-theme = "flexoki_light"
+theme = "github_light"
 
 [editor]
 auto-format = false

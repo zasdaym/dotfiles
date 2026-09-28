@@ -1,7 +1,7 @@
 command = "/opt/homebrew/bin/fish"
 font-family = "TX-02"
 macos-titlebar-proxy-icon = hidden
-theme = Flexoki Light
+theme = GitHub Light Default
 keybind = super+1=unbind
 keybind = super+digit_1=unbind
 keybind = super+2=unbind

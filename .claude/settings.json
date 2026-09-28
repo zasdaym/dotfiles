@@ -14,5 +14,5 @@
     }
   },
   "skipDangerousModePermissionPrompt": true,
-  "theme": "custom:flexoki-light"
+  "theme": "auto"
 }

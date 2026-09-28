@@ -25,12 +25,8 @@ vim.api.nvim_create_autocmd("PackChanged", {
 
 vim.pack.add({
 	{
-		src = "https://github.com/kepano/flexoki-neovim",
-		name = "flexoki",
-	},
-	{
-		src = "https://github.com/rose-pine/neovim",
-		name = "rose-pine",
+		src = "https://github.com/projekt0n/github-nvim-theme",
+		name = "github-theme",
 	},
 	{
 		src = "https://github.com/asiryk/auto-hlsearch.nvim",
@@ -119,11 +115,4 @@ vim.diagnostic.config({
 
 -- Theme -----------------------------------------------------------------
 
-require("rose-pine").setup({
-	variant = "dawn",
-	styles = {
-		italic = false,
-	},
-})
-
-vim.cmd("colorscheme flexoki")
+vim.cmd("colorscheme github_light_default")
