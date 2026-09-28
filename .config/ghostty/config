@@ -2,6 +2,7 @@ command = "/opt/homebrew/bin/fish"
 font-family = "TX-02"
 macos-titlebar-proxy-icon = hidden
 theme = GitHub Light Default
+cursor-style = bar
 keybind = super+1=unbind
 keybind = super+digit_1=unbind
 keybind = super+2=unbind
