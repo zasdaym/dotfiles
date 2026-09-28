@@ -1,7 +1,29 @@
 onboarding = false
 
 [theme]
-name = "one-light"
+name = "terminal"
+
+# GitHub Light Default
+[theme.custom]
+accent = "#0969DA"
+panel_bg = "#FFFFFF"
+sidebar_bg = "#F6F8FA"
+active_row_bg = "#EAEEF2"
+selection_bg = "#D8DEE4"
+surface0 = "#EAEEF2"
+surface1 = "#D0D7DE"
+surface_dim = "#D8DEE4"
+overlay0 = "#6E7781"
+overlay1 = "#57606A"
+text = "#1F2328"
+subtext0 = "#57606A"
+mauve = "#8250DF"
+green = "#1A7F37"
+yellow = "#9A6700"
+red = "#CF222E"
+blue = "#0969DA"
+teal = "#1B7C83"
+peach = "#BC4C00"
 
 [keys]
 switch_tab = "cmd+1..9"
