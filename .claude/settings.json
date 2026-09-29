@@ -6,13 +6,6 @@
   "permissions": {
     "defaultMode": "bypassPermissions"
   },
-  "model": "opus[1m]",
-  "syntaxHighlightingDisabled": false,
-  "modelSettings": {
-    "claude-opus-5-5": {
-      "effortLevel": "medium"
-    }
-  },
   "skipDangerousModePermissionPrompt": true,
   "theme": "auto"
 }
