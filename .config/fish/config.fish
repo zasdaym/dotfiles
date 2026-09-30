@@ -15,12 +15,7 @@ if status is-interactive
     end
 
     set -gx EDITOR hx
-    set -gx FZF_DEFAULT_OPTS '
-        --color=fg:#B7B5AC,bg:#FFFCF0,hl:#100F0F
-       	--color=fg+:#B7B5AC,bg+:#F2F0E5,hl+:#100F0F
-       	--color=border:#E6E4D9,header:#100F0F,gutter:#FFFCF0
-       	--color=spinner:#3AA99F,info:#3AA99F,separator:#F2F0E5
-       	--color=pointer:#D0A215,marker:#D14D41,prompt:#D0A215'
+    set -gx FZF_DEFAULT_OPTS '--no-color'
 
     if type -q fzf
         # fzf >= 0.48 provides fish integration via --fish.
