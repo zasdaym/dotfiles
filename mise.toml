@@ -81,6 +81,7 @@ zoxide = "latest"
 "~/.claude/settings.json" = ".claude/settings.json"
 "~/.claude/themes/flexoki-light.json" = ".claude/themes/flexoki-light.json"
 "~/.codex/AGENTS.md" = ".claude/CLAUDE.md"
+"~/.pi/agent/AGENTS.md" = ".claude/CLAUDE.md"
 # Self-manage the global mise config: symlink it back to this file.
 "~/.config/mise/config.toml" = "mise.toml"
 "~/.config/mise/config.linux.toml" = "mise.linux.toml"
