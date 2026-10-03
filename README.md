@@ -5,7 +5,7 @@ macOS or Linux x64 or arm64 machine. The installer installs mise, clones to
 `~/.dotfiles`, and runs `mise bootstrap`:
 
 ```sh
-curl -L https://s.id/zasdaym | bash
+curl -fsSL https://s.id/zasdaym | bash
 ```
 
 Once set up, re-apply changes with:

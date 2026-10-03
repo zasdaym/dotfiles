@@ -12,6 +12,15 @@ require_command_line_tools() {
   return 1
 }
 
+require_command() {
+  if command -v "$1" >/dev/null 2>&1; then
+    return
+  fi
+
+  printf '%s is required. Install it and run this installer again.\n' "$1" >&2
+  return 1
+}
+
 install_mise() {
   local install_path="$1"
 
@@ -40,6 +49,9 @@ main() {
     ;;
   esac
 
+  require_command curl
+  require_command git
+
   if command -v mise >/dev/null 2>&1; then
     mise_bin="$(command -v mise)"
   else
@@ -48,11 +60,6 @@ main() {
 
   if [[ ! -x "${mise_bin}" ]]; then
     printf 'Mise executable not found at %s.\n' "${mise_bin}" >&2
-    return 1
-  fi
-
-  if ! command -v git >/dev/null 2>&1; then
-    printf 'Git is required. Install Git and run this installer again.\n' >&2
     return 1
   fi
 
