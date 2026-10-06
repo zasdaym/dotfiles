@@ -12,5 +12,6 @@
     }
   },
   "skipDangerousModePermissionPrompt": true,
-  "theme": "auto"
+  "theme": "auto",
+  "model": "opus"
 }
