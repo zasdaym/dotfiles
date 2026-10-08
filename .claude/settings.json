@@ -6,12 +6,12 @@
   "permissions": {
     "defaultMode": "bypassPermissions"
   },
+  "model": "opus",
   "modelSettings": {
     "claude-opus-5-5": {
       "effortLevel": "medium"
     }
   },
   "skipDangerousModePermissionPrompt": true,
-  "theme": "auto",
-  "model": "opus"
+  "theme": "auto"
 }
