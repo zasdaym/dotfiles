@@ -60,6 +60,7 @@ yq = "latest"
 zoxide = "latest"
 
 "aqua:grafana/gcx" = "latest"
+"forgejo:gitea/tea" = { version = "latest", api_url = "https://gitea.com/api/v1" }
 "github:almonk/bontree" = "latest"
 "github:badranX/vim4helix" = "latest"
 "github:nklmilojevic/sofka" = "latest"
