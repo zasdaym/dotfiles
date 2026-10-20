@@ -48,6 +48,12 @@ FXDefaultSearchScope = "SCcf"
 FXEnableExtensionChangeWarning = false
 NewWindowTarget = "PfHm"
 
+[[bootstrap.macos.defaults_entries]]
+domain = "com.apple.finder"
+key = "StandardViewSettings"
+path = ["ExtendedListViewSettingsV2", "sortColumn"]
+value = "dateModified"
+
 [bootstrap.hooks.post-defaults]
 run = [
   '''test -f /etc/pam.d/sudo_local || sudo cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local; sudo sed -i '' 's/^#auth[[:space:]]*sufficient[[:space:]]*pam_tid\.so/auth       sufficient     pam_tid.so/' /etc/pam.d/sudo_local''',
