@@ -66,6 +66,7 @@ zoxide = "latest"
 "forgejo:gitea/tea" = { version = "latest", api_url = "https://gitea.com/api/v1" }
 "github:almonk/bontree" = "latest"
 "github:badranX/vim4helix" = "latest"
+"github:DeepanshuMishraa/leaf" = "latest"
 "github:nklmilojevic/sofka" = "latest"
 "github:jnsahaj/lumen" = "latest"
 "github:jsdelivr/globalping-cli" = "latest"
