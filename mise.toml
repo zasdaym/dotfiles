@@ -82,7 +82,7 @@ zoxide = "latest"
 [dotfiles]
 # symlink-each lets ~/.config (etc.) coexist with unmanaged files while linking
 # individual managed files into place.
-"~/.agents/skills" = { source = ".agents/skills", mode = "symlink-each" }
+"~/.claude/skills" = { source = ".claude/skills", mode = "copy" }
 "~/.config" = { source = ".config", mode = "symlink-each" }
 "~/.ssh" = { source = ".ssh", mode = "symlink-each" }
 "~/.codex/AGENTS.md" = ".claude/CLAUDE.md"
