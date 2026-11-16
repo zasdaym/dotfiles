@@ -4,9 +4,7 @@
 
 ## Code style
 
-- Avoid comments that repeat the code. Explain non-obvious decisions and constraints only if needed.
-- Test observable behavior and meaningful failure cases. Avoid tests that repeat implementation logic or only verify mock setup.
-- Add defensive checks at trust boundaries or for realistic failure modes. Within trusted code, rely on established invariants. Avoid redundant validation, speculative fallbacks, and error handling that hides bugs.
+- Avoid comments.
 - For Go, follow Google Go style guide.
 
 ## Git
