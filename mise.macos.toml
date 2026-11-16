@@ -32,6 +32,7 @@ KeyRepeat = 2
 InitialKeyRepeat = 15
 ApplePressAndHoldEnabled = false
 AppleShowAllExtensions = true
+NSNavPanelFileListModeForOpenMode2 = 1
 
 [bootstrap.macos.defaults."com.apple.menuextra.battery"]
 ShowPercent = "YES"
